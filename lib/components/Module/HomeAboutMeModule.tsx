@@ -21,7 +21,7 @@ const HomeAboutMeModule = () => {
           <h2 className="header-2 font-bold  mb-8">
             Get to know <span className="text-amethyst">me</span>
           </h2>
-          <p className="font-overpass text-[23px] leading-[36.8px] tracking-[2%]">
+          <p className="font-overpass text-[23px] leading-[36.8px] tracking-[0.02em]">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type

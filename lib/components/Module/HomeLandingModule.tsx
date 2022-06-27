@@ -11,7 +11,7 @@ const HomeLandingModule = () => {
           <span className="text-amethyst">- get fit here.</span>
         </h1>
 
-        <p className="font-overpass mb-8 text-[23px] leading-[36.8px] tracking-[2%]">
+        <p className="font-overpass mb-8 text-[23px] leading-[36.8px] tracking-[0.02em]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
           mauris enim lectus amet, cursus odio vel eu, ut.
         </p>
