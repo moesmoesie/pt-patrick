@@ -5,11 +5,19 @@ const HomeAboutMeModule = () => {
     <div className="bg-gray-300">
       <ModuleContainer>
         <div className="py-20">
-          <img
-            src="/assets/portrait.png"
-            alt="Trainer"
-            className="max-w-[335px] mb-12 rounded-full"
-          />
+          <div className="relative">
+            <img
+              src="/assets/portrait.png"
+              alt="Trainer"
+              className="max-w-[335px] mb-12 rounded-full"
+            />
+            <div className="absolute bottom-4 left-4">
+              <p className="font-overpass text-white font-bold text-[21px] tracking-[0.02em] rounded-sm px-4 py-3 bg-black">
+                John Caboosi
+              </p>
+            </div>
+          </div>
+
           <h2 className="header-2 font-bold  mb-8">
             Get to know <span className="text-amethyst">me</span>
           </h2>
