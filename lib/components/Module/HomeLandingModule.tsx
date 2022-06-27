@@ -1,11 +1,10 @@
-import Container from "../Container";
-import Card from "../Card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from "../Button";
+import { ModuleContainer, Card } from "../../components";
 
 const HomeLandingModule = () => {
   return (
-    <Container>
+    <ModuleContainer>
       <div className="mb-12">
         <h1 className="font-rubik mb-8 font-bold text-[48px] leading-[48px]">
           The best part of your day <br />
@@ -44,7 +43,7 @@ const HomeLandingModule = () => {
           />
         </div>
       </div>
-    </Container>
+    </ModuleContainer>
   );
 };
 

@@ -1,9 +1,9 @@
-import { Container } from "../../components";
+import { ModuleContainer } from "../../components";
 
 const HomeAboutMeModule = () => {
   return (
     <div className="bg-gray-300">
-      <Container>
+      <ModuleContainer>
         <div className="py-20">
           <img
             src="/assets/portrait.png"
@@ -21,7 +21,7 @@ const HomeAboutMeModule = () => {
             only five centuries, but also the leap into electronic typesetting.
           </p>
         </div>
-      </Container>
+      </ModuleContainer>
     </div>
   );
 };
