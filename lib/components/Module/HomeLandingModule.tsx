@@ -1,6 +1,7 @@
 import Container from "../Container";
 import Card from "../Card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Button from "../Button";
 
 const HomeLandingModule = () => {
   return (
@@ -16,9 +17,7 @@ const HomeLandingModule = () => {
           mauris enim lectus amet, cursus odio vel eu, ut.
         </p>
 
-        <button className="bg-black font-rubik font-medium text-[16px] tracking-[2%] leadning-[16px] px-6 py-3 rounded-sm text-white">
-          Join now
-        </button>
+        <Button>Join Now</Button>
       </div>
 
       <div className="relative">
