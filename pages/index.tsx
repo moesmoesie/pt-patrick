@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import { Module, Header } from "../lib/components";
 
 const Home: NextPage = () => {
-  const pages: any = ["homeLandingProps"];
+  const pages: any = ["homeLandingProps", "homeAboutMeModule"];
 
   return (
     <div className=" relative w-full min-h-screen">

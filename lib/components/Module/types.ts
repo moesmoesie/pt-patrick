@@ -1,5 +1,5 @@
 interface ModuleProps {
-  module: "homeLandingModule";
+  module: "homeLandingModule" | "homeAboutMeModule";
 }
 
 export default ModuleProps;
