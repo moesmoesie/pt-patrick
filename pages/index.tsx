@@ -1,14 +1,18 @@
 import type { NextPage } from "next";
-import { Container, Header } from "../lib/components";
+import { Module, Header } from "../lib/components";
 
 const Home: NextPage = () => {
+  const pages: any = ["homeLandingProps"];
+
   return (
-    <div className="bg-gray-500 w-full min-h-screen">
-      <div className="max-w-[375px] relative bg-white mx-auto min-h-screen">
+    <div className=" relative w-full min-h-screen">
+      <div id="header">
         <Header />
-        <Container>
-          <div className="w-full min-h-[300vh]" />
-        </Container>
+      </div>
+      <div className="pt-[2rem] overflow-hidden">
+        {pages.map((el: any) => {
+          return <Module key={el} module={el} />;
+        })}
       </div>
     </div>
   );
