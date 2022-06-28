@@ -1,4 +1,4 @@
-import { ModuleContainer } from "../../components";
+import { ModuleContainer, Chip } from "../../components";
 
 const HomeAboutMeModule = () => {
   return (
@@ -12,9 +12,7 @@ const HomeAboutMeModule = () => {
               className="max-w-[335px] mb-12 rounded-full"
             />
             <div className="absolute bottom-4 left-4">
-              <p className="font-overpass text-white font-bold text-[21px] tracking-[0.02em] rounded-sm px-4 py-3 bg-black">
-                John Caboosi
-              </p>
+              <Chip> John Caboosi</Chip>
             </div>
           </div>
 

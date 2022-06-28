@@ -1,6 +1,7 @@
 import ModuleContainer from "../ModuleContainer";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import { CorePillar } from "./types";
+import { Chip } from "../../components";
 
 const corePillars: CorePillar[] = [
   {
@@ -70,14 +71,7 @@ const CoreInfoModule = () => {
         <p className="body-1 mb-8 text-gray-900">{value.body}</p>
         <ul className="flex flex-wrap flex-row gap-2">
           {value.keywords.map((el) => {
-            return (
-              <div
-                key={el}
-                className="bg-black text-white rounded-sm text-[16px] font-medium px-3 py-2 font-rubik tracking-[0.02em]"
-              >
-                {el}
-              </div>
-            );
+            return <Chip key={el}>{el}</Chip>;
           })}
         </ul>
       </div>

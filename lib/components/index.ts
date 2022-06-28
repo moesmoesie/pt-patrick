@@ -4,3 +4,4 @@ export { default as Module } from "./Module";
 export { default as Card } from "./Card";
 export { default as Button } from "./Button";
 export { default as ModuleContainer } from "./ModuleContainer";
+export { default as Chip } from "./Chip";
