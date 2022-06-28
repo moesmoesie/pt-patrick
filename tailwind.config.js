@@ -22,7 +22,7 @@ module.exports = {
       "gray-300": "#f0f0f0",
       "gray-400": "#eeeeee",
       "gray-500": "#cccccc",
-      "gray-900)": "#333333",
+      "gray-900": "#333333",
     },
     text: {},
     extend: {},
