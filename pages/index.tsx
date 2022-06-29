@@ -1,7 +1,23 @@
-import type { NextPage } from "next";
+import type { NextPage, GetStaticProps } from "next";
 import { Module, Header } from "../lib/components";
+import {
+  getClient,
+  filterDataToSingleItem,
+} from "../lib/sanity/client/sanity.server";
+import { groq } from "next-sanity";
 
-const Home: NextPage = () => {
+const query = groq`
+  *[_type == 'homePage']{
+    _id,
+    title
+  }
+`;
+
+const Home: NextPage = (props: any) => {
+  const { page } = props;
+
+  console.log(page.title);
+
   const pages: any = [
     "homeLandingProps",
     "homeAboutMeModule",
@@ -13,6 +29,7 @@ const Home: NextPage = () => {
       <div id="header">
         <Header />
       </div>
+
       <div className="pt-[2rem] overflow-hidden">
         {pages.map((el: any) => {
           return <Module key={el} module={el} />;
@@ -20,6 +37,18 @@ const Home: NextPage = () => {
       </div>
     </div>
   );
+};
+
+export const getStaticProps: GetStaticProps = async ({ preview = false }) => {
+  const data = await getClient(preview).fetch(query);
+  const page = filterDataToSingleItem(data, preview);
+
+  return {
+    props: {
+      preview: preview,
+      page,
+    },
+  };
 };
 
 export default Home;
