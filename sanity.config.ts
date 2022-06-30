@@ -1,6 +1,7 @@
 import { createConfig } from "sanity";
 import { deskTool } from "sanity/desk";
 import { schemaTypes } from "./lib/sanity/schemas";
+import * as schemas from "./schemas";
 
 export default createConfig({
   name: "default",
@@ -13,6 +14,6 @@ export default createConfig({
   plugins: [deskTool()],
 
   schema: {
-    types: schemaTypes,
+    types: [...schemaTypes, ...(Object.values(schemas) as any)],
   },
 });

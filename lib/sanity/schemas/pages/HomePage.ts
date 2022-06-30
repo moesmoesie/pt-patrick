@@ -1,7 +1,5 @@
 import { defineType } from "sanity";
-import * as modules from "../modules";
-export const moduleSchemaTypes = Object.values(modules);
-
+import { modulesTypes } from "../utils";
 export default defineType({
   title: "Home",
   type: "document",
@@ -30,11 +28,7 @@ export default defineType({
       of: [
         {
           type: "reference",
-          to: moduleSchemaTypes.map((el) => {
-            return {
-              type: el.name,
-            };
-          }),
+          to: modulesTypes,
         },
       ],
     },
