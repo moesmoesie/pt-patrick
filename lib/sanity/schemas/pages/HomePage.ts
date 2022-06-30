@@ -12,13 +12,11 @@ export default defineType({
       name: "title",
       title: "Title",
     },
-
     {
       type: "text",
       name: "description",
       title: "Description",
     },
-
     {
       type: "array",
       name: "keywords",

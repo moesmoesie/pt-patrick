@@ -28,6 +28,12 @@ const homeCoreInfoModule = `{
   }
 }`;
 
+const homeAboutmeModule = `{
+  title,
+  name,
+  body
+}`;
+
 // START PAGES
 
 export const homeQuery = /* groq */ `
@@ -40,7 +46,9 @@ export const homeQuery = /* groq */ `
         "key" : _id,
         "type" : _type,
         _type == 'homeLandingModule' => ${homeLandingModule},
-        _type == 'homeCoreInfoModule' => ${homeCoreInfoModule}
+        _type == 'homeCoreInfoModule' => ${homeCoreInfoModule},
+        _type == 'homeAboutMeModule' => ${homeAboutmeModule},
+
     }
   }
 `;
