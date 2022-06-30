@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Button from "../Button";
+import { Button } from "../../components";
 import { ModuleContainer, Card } from "../../components";
 import { HomeLandingModuleZod } from "./types";
 import { z } from "zod";

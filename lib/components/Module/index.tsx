@@ -1,5 +1,5 @@
 import ModuleZod from "./types";
-import HomeLandingModule from "./HomeLandingModule";
+import HomeLandingModule from "../../modules/HomeLandingModule";
 import { z } from "zod";
 
 const Module: React.FC<z.infer<typeof ModuleZod>> = (props) => {

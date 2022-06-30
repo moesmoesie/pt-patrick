@@ -1,7 +1,13 @@
-import ModuleContainer from "../ModuleContainer";
 import { useState } from "react";
-import { CorePillar } from "./types";
-import { Chip } from "../../components";
+import { Chip, ModuleContainer } from "../../components";
+
+interface CorePillar {
+  value: string;
+  title: string;
+  body: string;
+  keywords: string[];
+  image: string;
+}
 
 const corePillars: CorePillar[] = [
   {
