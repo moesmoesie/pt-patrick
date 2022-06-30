@@ -1,52 +1,45 @@
 import type { NextPage, GetStaticProps } from "next";
 import { Module, Header } from "../lib/components";
+import { homeQuery as query } from "../lib/sanity/client/queries";
+import { z } from "zod";
+
 import {
   getClient,
   filterDataToSingleItem,
 } from "../lib/sanity/client/sanity.server";
-import { groq } from "next-sanity";
 
-const query = groq`
-  *[_type == 'homePage']{
-    _id,
-    title
-  }
-`;
+import { HomePageZod } from "../types";
+type HomePageProps = z.infer<typeof HomePageZod>;
 
-const Home: NextPage = (props: any) => {
-  const { page } = props;
+interface Props {
+  preview: boolean;
+  page: HomePageProps;
+}
 
-  console.log(page.title);
-
-  const pages: any = [
-    "homeLandingProps",
-    "homeAboutMeModule",
-    "homeCoreInfoModule",
-  ];
-
+const Home: NextPage<Props> = ({ preview, page }) => {
   return (
     <div className=" relative w-full min-h-screen">
-      <div id="header">
-        <Header />
-      </div>
-
+      <Header />
       <div className="pt-[2rem] overflow-hidden">
-        {pages.map((el: any) => {
-          return <Module key={el} module={el} />;
+        {page.modules.map((el) => {
+          return <Module {...el} key={el.key} />;
         })}
       </div>
     </div>
   );
 };
 
-export const getStaticProps: GetStaticProps = async ({ preview = false }) => {
+export const getStaticProps: GetStaticProps<Props> = async ({
+  preview = false,
+}) => {
   const data = await getClient(preview).fetch(query);
   const page = filterDataToSingleItem(data, preview);
+  HomePageZod.parse(page);
 
   return {
     props: {
       preview: preview,
-      page,
+      page: page,
     },
   };
 };

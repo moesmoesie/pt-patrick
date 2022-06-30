@@ -1,18 +1,13 @@
-import ModuleProps from "./types";
+import ModuleZod from "./types";
 import HomeLandingModule from "./HomeLandingModule";
-import HomeAboutMeModule from "./HomeAboutMeModule";
-import HomeCoreInfoModule from "./HomeCoreInfoModule";
+import { z } from "zod";
 
-const Module: React.FC<ModuleProps> = ({ module }) => {
-  switch (module) {
+const Module: React.FC<z.infer<typeof ModuleZod>> = (props) => {
+  switch (props.type) {
     case "homeLandingModule":
-      return <HomeLandingModule />;
-    case "homeAboutMeModule":
-      return <HomeAboutMeModule />;
-    case "homeCoreInfoModule":
-      return <HomeCoreInfoModule />;
+      return <HomeLandingModule {...props} />;
     default:
-      return <HomeLandingModule />;
+      return <div>Module</div>;
   }
 };
 
