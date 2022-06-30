@@ -1,21 +1,13 @@
 import { useState } from "react";
 import { Chip, ModuleContainer } from "../../components";
+import { HomeCoreInfoModuleProps, CorePillarProps } from "./types";
 
-interface CorePillar {
-  value: string;
-  title: string;
-  body: string;
-  keywords: string[];
-  image: string;
-}
-
-const corePillars: CorePillar[] = [
+const corePillars: CorePillarProps[] = [
   {
     value: "Strenght",
     title: "Become Stronger",
     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci odio lorem euismod eu. Ipsum quis ipsum tellus eget. Nulla odio accumsan sit venenatis convallis gravida curabitur faucibus in. Luctus lectus neque amet maecenas habitasse nisi, mi purus tempus.",
     keywords: ["Powerlifting", "AMRAP", "Practical strenght"],
-    image: "/assets/strenght.png",
   },
 
   {
@@ -23,7 +15,6 @@ const corePillars: CorePillar[] = [
     title: "Move Better",
     body: "Lorem ipsum dolor sit amet,lla odio accumsan sit venenatis convallis gravida curabitur faucibus in. Luctus lectus neque amet maecenas habitasse nisi, mi purus tempus.",
     keywords: ["Powerlifting"],
-    image: "/assets/strenght.png",
   },
 
   {
@@ -31,24 +22,20 @@ const corePillars: CorePillar[] = [
     title: "Become Stronger",
     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci odio lorem euismod eu. Ipsum quis ipsum tellus eget. Nulla odio accumsan sit venenatis convallis gravida curabitur faucibus in. Luctus lectus neque amet maecenas habitasse nisi, mi purus tempus.",
     keywords: ["Powerlifting"],
-    image: "/assets/strenght.png",
   },
 ];
 
-const CoreInfoModule = () => {
-  const [value, setValue] = useState<CorePillar>(corePillars[0]);
+const CoreInfoModule: React.FC<HomeCoreInfoModuleProps> = (props) => {
+  const [value, setValue] = useState<CorePillarProps>(corePillars[0]);
 
   return (
     <ModuleContainer>
       <div>
-        <h2 className="header-2 font-bold mb-12">
-          The right <span className="text-amethyst">goal</span> makes all the
-          <span className="text-amethyst"> difference</span>
-        </h2>
+        <h2 className="header-2 font-bold mb-12">{props.title}</h2>
 
         <div className="w-full relative h-[290px] mb-12 overflow-hidden rounded-lg">
           <img
-            src={value.image}
+            src={"/assets/strenght.png"}
             alt="strenght"
             className="w-full h-full left-0 top-0 absolute object-cover"
           />
@@ -56,7 +43,7 @@ const CoreInfoModule = () => {
           <div className="w-full h-full bg-black  absolute left-0 top-0 opacity-25" />
 
           <ul className="absolute px-6 flex flex-col gap-5 top-1/2 -translate-y-1/2">
-            {corePillars.map((el) => {
+            {props.corePillars.map((el) => {
               return (
                 <li key={el.value}>
                   <button

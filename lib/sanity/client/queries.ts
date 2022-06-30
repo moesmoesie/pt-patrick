@@ -18,6 +18,16 @@ const homeLandingModule = `{
     }
 }`;
 
+const homeCoreInfoModule = `{
+  title,
+  corePillars[]{
+    value,
+    title,
+    body,
+    keywords
+  }
+}`;
+
 // START PAGES
 
 export const homeQuery = /* groq */ `
@@ -29,7 +39,8 @@ export const homeQuery = /* groq */ `
     modules[]-> {
         "key" : _id,
         "type" : _type,
-        _type == 'homeLandingModule' => ${homeLandingModule}
+        _type == 'homeLandingModule' => ${homeLandingModule},
+        _type == 'homeCoreInfoModule' => ${homeCoreInfoModule}
     }
   }
 `;
