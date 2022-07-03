@@ -34,6 +34,14 @@ const homeAboutmeModule = `{
   body
 }`;
 
+const homeWorkoutsModule = `{
+  title,
+  workouts[]{
+    name,
+    description
+  }
+}`;
+
 // START PAGES
 
 export const homeQuery = /* groq */ `
@@ -48,7 +56,7 @@ export const homeQuery = /* groq */ `
         _type == 'homeLandingModule' => ${homeLandingModule},
         _type == 'homeCoreInfoModule' => ${homeCoreInfoModule},
         _type == 'homeAboutMeModule' => ${homeAboutmeModule},
-
+        _type == 'homeWorkoutsModule' => ${homeWorkoutsModule}
     }
   }
 `;
