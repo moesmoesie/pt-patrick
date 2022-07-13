@@ -3,4 +3,5 @@ export const modulesTypes = [
   { type: "homeCoreInfoModule" },
   { type: "homeLandingModule" },
   { type: "homeWorkoutsModule" },
+  { type: "homeHighlightModule" },
 ];
