@@ -8,6 +8,13 @@ module.exports = {
     "./lib/modules/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    dropShadow: {
+      "shadow-light": [
+        "0px 10px 10px rgba(19, 19, 22, 0.08)",
+        "0px 16px 32px rgba(0, 0, 0, 0.08)",
+        "0px 32px 64px rgba(0, 0, 0, 0.04)",
+      ],
+    },
     screens: {
       noBackdropFilterSupport: { raw: "@supports (display: flex)" },
       small: "375px",
