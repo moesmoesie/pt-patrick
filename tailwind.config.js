@@ -1,3 +1,5 @@
+const plugin = require("tailwindcss/plugin");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -7,6 +9,7 @@ module.exports = {
   ],
   theme: {
     screens: {
+      noBackdropFilterSupport: { raw: "@supports (display: flex)" },
       small: "375px",
       medium: "768px",
       large: "1280px",
@@ -28,5 +31,12 @@ module.exports = {
     text: {},
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addVariant }) {
+      addVariant(
+        "supports-backdrop-filter",
+        "@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none))"
+      );
+    }),
+  ],
 };

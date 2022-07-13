@@ -28,11 +28,11 @@ const WorkoutCard: React.FC<WorkoutProps> = (workout) => {
       }}
       className="w-[288px] relative items-start flex flex-col justify-end min-w-[288px] bg-green h-[288px] overflow-hidden rounded-lg"
     >
-      <div className="w-full flex flex-col items-start p-6 z-50 h-[222px] absolute bottom-0">
+      <div className="w-full flex overflow-hidden flex-col items-start p-6 rounded-lg z-50 h-[222px] absolute bottom-0">
         {isActive && (
           <>
             <div className="w-full h-full absolute top-0 left-0 backdrop-blur-md" />
-            <div className="w-full h-full absolute top-0 left-0 bg-white/60" />
+            <div className="w-full h-full absolute top-0 left-0 bg-white/95 supports-backdrop-filter:bg-white/60" />
             <div className="relative flex gap-[10px] flex-col items-start mb-[10px]">
               <Chip>{workout.name}</Chip>
               <p className="body-2">{workout.description}</p>
