@@ -1,6 +1,10 @@
 import { HomeReviewsModuleProps } from "./types";
 import { Container, ContainerScroll } from "../../components";
+import React, { useRef, useState } from "react";
 const HomeHighlightModudle: React.FC<HomeReviewsModuleProps> = (props) => {
+  const element = useRef<HTMLDivElement>(null);
+  const [currentLevel, setCurrentLevel] = useState(0);
+
   return (
     <div className="py-20">
       <div className="mb-10">
@@ -10,10 +14,22 @@ const HomeHighlightModudle: React.FC<HomeReviewsModuleProps> = (props) => {
       </div>
 
       <div>
-        <ContainerScroll height="600px">
+        <ContainerScroll
+          onScroll={(e) => {
+            const level = Math.floor(
+              (e.currentTarget.scrollLeft + 10) / element.current?.clientWidth!
+            );
+
+            if (level != currentLevel) {
+              setCurrentLevel(level);
+            }
+          }}
+          height="600px"
+        >
           {[1, 2, 3, 4, 5].map((el, index) => {
             return (
               <div
+                ref={index == 0 ? element : null}
                 key={index}
                 className="first:ml-0 ml-5 snap-center last:pr-5"
               >
@@ -54,16 +70,29 @@ const HomeHighlightModudle: React.FC<HomeReviewsModuleProps> = (props) => {
         </ContainerScroll>
       </div>
 
-      <div className="flex w-full justify-center mt-2 gap-2">
-        {[1, 2, 3, 4, 5].map((el, index) => {
-          return (
-            <div
-              key={index}
-              className="w-3 h-3 rounded-full first:w-8 first:bg-amethyst bg-black"
-            />
-          );
-        })}
-      </div>
+      <Picker currentLevel={currentLevel} />
+    </div>
+  );
+};
+
+const Picker: React.FC<{ currentLevel: number }> = (props) => {
+  return (
+    <div className="flex w-full justify-center mt-2 gap-2">
+      {[1, 2, 3, 4, 5].map((el, index) => {
+        return (
+          <div
+            key={index}
+            className={`
+                ${
+                  props.currentLevel == index
+                    ? "w-8 bg-amethyst"
+                    : "w-3 bg-black"
+                }
+                h-3 rounded-full transition-all
+            `}
+          />
+        );
+      })}
     </div>
   );
 };

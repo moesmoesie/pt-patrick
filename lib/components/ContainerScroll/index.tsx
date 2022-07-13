@@ -7,6 +7,7 @@ const ContainerScroll: React.FC<ContainerScrollProps> = (props) => {
       style={{
         height: props.height,
       }}
+      onScroll={props.onScroll}
       className="relative hide-scrollbar overflow-x-scroll snap-x snap-mandatory"
     >
       <Container>
