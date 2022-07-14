@@ -6,7 +6,11 @@ const HomeHighlightModudle: React.FC<HomeReviewsModuleProps> = (props) => {
   const [currentLevel, setCurrentLevel] = useState(0);
 
   return (
-    <div className="py-20">
+    <div className="py-20 relative">
+      {/* START BACKGROUND */}
+      <div className="w-[170px] top-1/2 right-0 h-[170px] bg-amethyst blur-[120px] absolute" />
+      {/* END BACKGROUND */}
+
       <div className="mb-10">
         <Container>
           <p className="header-2 font-bold">{props.title}</p>
