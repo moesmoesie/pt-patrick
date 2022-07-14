@@ -1,5 +1,5 @@
 import type { NextPage, GetStaticProps } from "next";
-import { Module, Header } from "../lib/components";
+import { Module, Header, Footer } from "../lib/components";
 import { homeQuery as query } from "../lib/sanity/client/queries";
 import { z } from "zod";
 
@@ -18,13 +18,14 @@ interface Props {
 
 const Home: NextPage<Props> = ({ preview, page }) => {
   return (
-    <div className=" relative w-full min-h-screen">
+    <div className="relative w-full min-h-screen">
       <Header />
       <div className="pt-[2rem] overflow-hidden">
         {page.modules.map((el) => {
           return <Module {...el} key={el.key} />;
         })}
       </div>
+      <Footer />
     </div>
   );
 };
