@@ -48,7 +48,7 @@ const Question: React.FC<{ title: string; body: string }> = ({
       onClick={() => setActive(!active)}
       className="p-5 flex  flex-col text-left border rounded-sm border-gray-400 "
     >
-      <div className="flex items-center gap-3">
+      <div className="flex justify-between w-full items-center gap-3">
         <p className="body-1 font-bold">{title}</p>
         <div
           className={`${
