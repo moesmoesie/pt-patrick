@@ -7,4 +7,5 @@ export const modulesTypes = [
   { type: "homeReviewsModule" },
   { type: "homePricingModule" },
   { type: "homeFaqModule" },
+  { type: "contactModule" },
 ];

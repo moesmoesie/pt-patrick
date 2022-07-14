@@ -8,6 +8,7 @@ import {
   HomeReviewsModule,
   HomePricingModule,
   HomeFaqModule,
+  ContactModule,
 } from "../../modules";
 import { z } from "zod";
 
@@ -29,6 +30,8 @@ const Module: React.FC<z.infer<typeof ModuleZod>> = (props) => {
       return <HomePricingModule {...props} />;
     case "homeFaqModule":
       return <HomeFaqModule {...props} />;
+    case "contactModule":
+      return <ContactModule {...props} />;
     default:
       return <div>Module</div>;
   }
