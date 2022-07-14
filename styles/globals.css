@@ -58,7 +58,7 @@
   }
 
   .header-5-small {
-    @apply font-rubik leading-[1] text-[23x];
+    @apply font-rubik leading-[1] text-[23px];
   }
 
   .header-1-large {
@@ -78,7 +78,7 @@
   }
 
   .header-5-large {
-    @apply font-rubik leading-[1.4] text-[27x];
+    @apply font-rubik leading-[1.4] text-[27px];
   }
 
   .header-1 {
