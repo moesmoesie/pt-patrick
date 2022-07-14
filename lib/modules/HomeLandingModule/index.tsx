@@ -8,7 +8,12 @@ const HomeLandingModule: React.FC<z.infer<typeof HomeLandingModuleZod>> = (
   props
 ) => {
   return (
-    <ModuleContainer paddingTop="large" paddingBottom="large">
+    <ModuleContainer
+      color={props.backgroundColor}
+      paddingTop={props.paddingTop}
+      paddingBottom={props.paddingBottom}
+      hasSeperator={props.hasSeperator}
+    >
       <div className="mb-12">
         <h1 className="font-rubik mb-8 font-bold text-[48px] leading-[48px]">
           {props.hero.title}

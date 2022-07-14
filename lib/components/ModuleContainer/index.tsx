@@ -10,7 +10,7 @@ const ModuleContainer: React.FC<ModuleContainerProps> = ({
   return (
     <div
       style={{
-        backgroundColor: color,
+        backgroundColor: color ?? "",
       }}
     >
       <Container>

@@ -27,8 +27,7 @@ export default defineType({
       type: "array",
       of: [
         {
-          type: "reference",
-          to: modulesTypes,
+          type: "moduleContainer",
         },
       ],
     },

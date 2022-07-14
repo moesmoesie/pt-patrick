@@ -71,9 +71,15 @@ export const homeQuery = /* groq */ `
     title,
     description,
     keywords,
-    modules[]-> {
-        "key" : _id,
+
+    modules[] {
+        paddingTop,
+        paddingBottom,
+        backgroundColor,
+        hasSeperator,
+      ...module -> {
         "type" : _type,
+        "key" : _id,
         _type == 'homeLandingModule' => ${homeLandingModule},
         _type == 'homeCoreInfoModule' => ${homeCoreInfoModule},
         _type == 'homeAboutMeModule' => ${homeAboutmeModule},
@@ -83,6 +89,7 @@ export const homeQuery = /* groq */ `
         _type == 'homePricingModule' => ${homePricingModule},
         _type =='homeFaqModule' => ${homeFaqModule},
         _type == 'contactModule' => ${contactModule}
+      } 
     }
   }
 `;

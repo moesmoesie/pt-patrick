@@ -5,7 +5,12 @@ import { useState } from "react";
 
 const HomeWorkoutsModule: React.FC<HomeWorkoutsModuleProps> = (props) => {
   return (
-    <ModuleContainer paddingBottom="large" color="#f0f0f0">
+    <ModuleContainer
+      color={props.backgroundColor}
+      paddingTop={props.paddingTop}
+      paddingBottom={props.paddingBottom}
+      hasSeperator={props.hasSeperator}
+    >
       <div>
         <h2 className="header-2 font-bold mb-12">{props.title}</h2>
         <div className="flex w-full gap-4 pb-4 overflow-x-scroll">

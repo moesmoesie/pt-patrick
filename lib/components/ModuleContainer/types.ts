@@ -1,9 +1,9 @@
 interface ModuleContainerProps {
   children: JSX.Element | JSX.Element[];
-  color?: string;
-  paddingBottom?: "small" | "medium" | "large" | "none";
-  paddingTop?: "small" | "medium" | "large" | "none";
-  hasSeperator?: boolean;
+  color?: string | null;
+  paddingBottom?: "small" | "medium" | "large" | "none" | null;
+  paddingTop?: "small" | "medium" | "large" | "none" | null;
+  hasSeperator?: boolean | null;
 }
 
 export default ModuleContainerProps;

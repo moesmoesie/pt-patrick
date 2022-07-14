@@ -6,7 +6,11 @@ const HomeHighlightModudle: React.FC<HomeReviewsModuleProps> = (props) => {
   const [currentLevel, setCurrentLevel] = useState(0);
 
   return (
-    <PaddingContainer color="#f0f0f0">
+    <PaddingContainer
+      paddingBottom={props.paddingBottom}
+      paddingTop={props.paddingTop}
+      color={props.backgroundColor}
+    >
       <div className="relative">
         {/* START BACKGROUND */}
         <div className="w-[170px] top-1/2 right-0 h-[170px] bg-amethyst blur-[120px] absolute" />

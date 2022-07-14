@@ -3,7 +3,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ModuleContainer } from "../../components";
 const HomeHighlightModudle: React.FC<HomeHighlightModuleProps> = (props) => {
   return (
-    <ModuleContainer paddingTop="none" color="#000000">
+    <ModuleContainer
+      color="#000000"
+      paddingTop={props.paddingTop}
+      paddingBottom={props.paddingBottom}
+      hasSeperator={props.hasSeperator}
+    >
       <img
         className="w-full object-cover h-[355px] rounded-lg -translate-y-10"
         alt="location"

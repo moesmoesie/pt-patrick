@@ -1,8 +1,8 @@
 interface PaddingContainerProps {
   children: JSX.Element | JSX.Element[];
-  color?: string;
-  paddingBottom?: "small" | "medium" | "large" | "none";
-  paddingTop?: "small" | "medium" | "large" | "none";
+  color?: string | null;
+  paddingBottom?: "small" | "medium" | "large" | "none" | null;
+  paddingTop?: "small" | "medium" | "large" | "none" | null;
 }
 
 export default PaddingContainerProps;

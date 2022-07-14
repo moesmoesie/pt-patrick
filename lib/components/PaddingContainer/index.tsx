@@ -9,7 +9,7 @@ const PaddingContainer: React.FC<PaddingContainerProps> = ({
   return (
     <div
       style={{
-        background: color,
+        background: color ?? "",
       }}
       className={`
           ${

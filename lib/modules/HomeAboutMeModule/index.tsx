@@ -3,12 +3,11 @@ import { HomeAboutMeProps } from "./types";
 
 const HomeAboutMeModule: React.FC<HomeAboutMeProps> = (props) => {
   return (
-    //@ts-ignore
     <ModuleContainer
-      paddingBottom="medium"
-      hasSeperator
-      paddingTop="large"
-      color="#f0f0f0"
+      color={props.backgroundColor}
+      paddingTop={props.paddingTop}
+      paddingBottom={props.paddingBottom}
+      hasSeperator={props.hasSeperator}
     >
       <div className="relative">
         <img
