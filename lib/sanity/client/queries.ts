@@ -55,6 +55,10 @@ const homePricingModule = `{
   title,
 }`;
 
+const homeFaqModule = `{
+  title,
+}`;
+
 // START PAGES
 
 export const homeQuery = /* groq */ `
@@ -72,7 +76,8 @@ export const homeQuery = /* groq */ `
         _type == 'homeWorkoutsModule' => ${homeWorkoutsModule},
         _type == 'homeHighlightModule' => ${homeHighlightModule},
         _type == 'homeReviewsModule' => ${homeReviewsModule},
-        _type == 'homePricingModule' => ${homePricingModule}
+        _type == 'homePricingModule' => ${homePricingModule},
+        _type =='homeFaqModule' => ${homeFaqModule}
     }
   }
 `;

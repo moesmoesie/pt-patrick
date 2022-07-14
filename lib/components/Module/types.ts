@@ -6,7 +6,7 @@ import { HomeWorkoutsModuleZod } from "../../modules/HomeWorkoutsModule/types";
 import { HomeHighlightModuleZod } from "../../modules/HomeHighlightModule/types";
 import { HomeReviewsModuleZod } from "../../modules/HomeReviewsModule/types";
 import { HomePricingModuleZod } from "../../modules/HomePricingModule/types";
-
+import { HomeFaqModuleZod } from "../../modules/HomeFaqModule/types";
 const ModuleZod = z.discriminatedUnion("type", [
   HomeLandingModuleZod,
   HomeAboutMeModuleZod,
@@ -15,6 +15,7 @@ const ModuleZod = z.discriminatedUnion("type", [
   HomeHighlightModuleZod,
   HomeReviewsModuleZod,
   HomePricingModuleZod,
+  HomeFaqModuleZod,
 ]);
 
 export default ModuleZod;
