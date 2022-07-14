@@ -8,3 +8,4 @@ export { default as Chip } from "./Chip";
 export { default as ContainerScroll } from "./ContainerScroll";
 export { default as PricingCard } from "./PricingCard";
 export { default as Footer } from "./Footer";
+export { default as PaddingContainer } from "./PaddingContainer";

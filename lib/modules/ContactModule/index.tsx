@@ -1,11 +1,16 @@
 import { ContactModuleProps } from "./types";
-import { Container } from "../../components";
+import { ModuleContainer } from "../../components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ContactModule: React.FC<ContactModuleProps> = (props) => {
   return (
-    <div className="bg-black text-white mt-10  pb-20">
-      <Container>
+    <ModuleContainer
+      paddingTop={"none"}
+      paddingBottom="medium"
+      hasSeperator={true}
+      color="#000000"
+    >
+      <div className="text-white mt-10">
         <img
           className="w-full object-cover h-[355px] rounded-lg -translate-y-10"
           alt="location"
@@ -13,7 +18,7 @@ const ContactModule: React.FC<ContactModuleProps> = (props) => {
         />
         <h2 className="header-2 mb-8 font-bold pr-4">{props.title}</h2>
         <p className="body-1 mb-7">
-          We’ll keep you updated on the things you need to know about Gym.
+          Well keep you updated on the things you need to know about Gym.
           Nothing more, nothing less.
         </p>
         <div className="flex gap-5">
@@ -36,8 +41,8 @@ const ContactModule: React.FC<ContactModuleProps> = (props) => {
             />
           </button>
         </div>
-      </Container>
-    </div>
+      </div>
+    </ModuleContainer>
   );
 };
 

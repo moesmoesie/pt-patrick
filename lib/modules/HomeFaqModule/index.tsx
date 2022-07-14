@@ -20,7 +20,7 @@ const questions = [
 
 const HomeFaqModule: React.FC<HomeFaqModuleProps> = (props) => {
   return (
-    <ModuleContainer>
+    <ModuleContainer paddingTop="none">
       <div>
         <h2 className="header-2 mb-12 font-bold">{props.title}</h2>
         <p className="body-1 text-gray-900 mb-8">

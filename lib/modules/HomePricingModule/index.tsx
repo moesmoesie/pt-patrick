@@ -3,7 +3,7 @@ import { ModuleContainer, PricingCard } from "../../components";
 
 const HomePricingModule: React.FC<HomePricingModuleProps> = (props) => {
   return (
-    <ModuleContainer>
+    <ModuleContainer paddingBottom="large">
       <h2 className="header-2 font-bold mb-12">{props.title}</h2>
       <div className="flex flex-col gap-6">
         <PricingCard

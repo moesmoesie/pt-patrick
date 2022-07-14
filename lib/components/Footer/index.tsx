@@ -1,8 +1,9 @@
 import { Container } from "../../components";
+import { ModuleContainer } from "../../components";
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-black pb-14">
-      <Container>
+    <ModuleContainer paddingTop="small" paddingBottom="small" color="#000000">
+      <footer>
         <nav className="text-white mb-6 body-2">
           <ul className="flex gap-x-6 gap-y-2 flex-wrap">
             <li>
@@ -19,8 +20,8 @@ const Footer: React.FC = () => {
         <p className="body-2 text-white">
           All rights reserved <span className="text-amethyst">gym.ly</span>
         </p>
-      </Container>
-    </footer>
+      </footer>
+    </ModuleContainer>
   );
 };
 

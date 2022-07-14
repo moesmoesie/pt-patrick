@@ -29,7 +29,7 @@ const CoreInfoModule: React.FC<HomeCoreInfoModuleProps> = (props) => {
   const [value, setValue] = useState<CorePillarProps>(corePillars[0]);
 
   return (
-    <ModuleContainer>
+    <ModuleContainer color="#f0f0f0" hasSeperator={true}>
       <div>
         <h2 className="header-2 font-bold mb-12">{props.title}</h2>
 
