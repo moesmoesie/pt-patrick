@@ -10,7 +10,7 @@ const HomePricingModule: React.FC<HomePricingModuleProps> = (props) => {
       hasSeperator={props.hasSeperator}
     >
       <h2 className="header-2 mb-12 font-bold">{props.title}</h2>
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 large:flex-row">
         {props.pricingList.map((el, index) => {
           return (
             <PricingCard

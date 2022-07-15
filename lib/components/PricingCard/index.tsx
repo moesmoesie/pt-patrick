@@ -4,17 +4,23 @@ const PricingCard: React.FC<PricingCardProps> = (props) => {
   return (
     <div className={props.color}>
       <div
-        className={`shadow-1 space-y-5 rounded-lg px-6 py-8 dark:bg-black dark:text-white`}
+        className={`shadow-1 space-y-5 rounded-lg px-6 py-8 dark:bg-black dark:text-white medium:space-y-8 medium:p-10`}
       >
         <p className="body-3 inline-block rounded-sm bg-black px-[14px] py-[4px] text-white dark:bg-white dark:text-black">
           {props.tag}
         </p>
-        <p className="header-3 flex items-baseline font-bold">
-          <span>{props.price}</span> <span className="header-5">€</span>
-        </p>
+        <div className="flex flex-col">
+          <p className="header-3 flex items-baseline font-bold">
+            <span>{props.price}</span> <span className="header-5">€</span>
+          </p>
+          <p className="-mt-1 font-overpass text-[12px]">
+            {props.priceTagline}
+          </p>
+        </div>
+
         <p className="body-2">{props.body}</p>
 
-        <ul className="grid gap-2">
+        <ul className="grid gap-2 medium:gap-4">
           {props.bulletPoints.map((e, index) => {
             return (
               <li className="flex items-center gap-[10px] " key={index}>
