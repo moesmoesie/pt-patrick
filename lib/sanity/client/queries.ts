@@ -95,6 +95,10 @@ const homeFaqModule = `{
 
 const contactModule = `{
   title,
+  body,
+  whatsapp,
+  email,
+  phone
 }`;
 
 // END MODULES

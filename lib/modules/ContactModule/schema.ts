@@ -14,5 +14,25 @@ export default defineType({
       name: "title",
       type: "string",
     },
+    {
+      title: "Body",
+      name: "body",
+      type: "text",
+    },
+    {
+      title: "Whatsapp",
+      name: "whatsapp",
+      type: "string",
+    },
+    {
+      title: "Phone",
+      name: "phone",
+      type: "string",
+    },
+    {
+      title: "Email",
+      name: "email",
+      type: "string",
+    },
   ],
 });
