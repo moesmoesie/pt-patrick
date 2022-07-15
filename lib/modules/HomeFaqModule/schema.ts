@@ -15,5 +15,27 @@ export default defineType({
       title: "Title",
       type: "string",
     },
+    {
+      name: "questions",
+      title: "Questions",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "title",
+              title: "Title",
+              type: "string",
+            },
+            {
+              name: "body",
+              title: "Body",
+              type: "text",
+            },
+          ],
+        },
+      ],
+    },
   ],
 });

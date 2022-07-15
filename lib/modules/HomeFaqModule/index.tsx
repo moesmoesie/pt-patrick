@@ -3,21 +3,6 @@ import { ModuleContainer } from "../../components";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const questions = [
-  {
-    title: "How can I book a workout class?",
-    body: "Booking a workout classe is simple for our members. Simply log into your Gymme account on our website and click.",
-  },
-  {
-    title: "Is there water available at the gym?",
-    body: "Booking a workout classe is simple for our members. Simply log into your Gymme account on our website and click.",
-  },
-  {
-    title: "Is there water available at the gym?",
-    body: "Booking a workout classe is simple for our members. Simply log into your Gymme account on our website and click.",
-  },
-];
-
 const HomeFaqModule: React.FC<HomeFaqModuleProps> = (props) => {
   return (
     <ModuleContainer paddingTop="none">
@@ -28,7 +13,7 @@ const HomeFaqModule: React.FC<HomeFaqModuleProps> = (props) => {
           mauris enim lectus amet, cursus odio vel eu, ut.{" "}
         </p>
         <div className="flex flex-col gap-5">
-          {questions.map((e, index) => {
+          {props.questions.map((e, index) => {
             return <Question key={index} title={e.title} body={e.body} />;
           })}
         </div>

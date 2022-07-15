@@ -87,6 +87,10 @@ const homePricingModule = `{
 
 const homeFaqModule = `{
   title,
+  questions[]{
+    title,
+    body
+  }
 }`;
 
 const contactModule = `{
@@ -103,7 +107,6 @@ export const homeQuery = /* groq */ `
     title,
     description,
     keywords,
-
     modules[] {
         paddingTop,
         paddingBottom,
