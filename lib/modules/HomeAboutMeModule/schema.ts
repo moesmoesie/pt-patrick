@@ -25,5 +25,27 @@ export default defineType({
       name: "body",
       type: "text",
     },
+    {
+      title: "Image",
+      name: "image",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: "caption",
+          type: "string",
+          title: "Caption",
+          description: "Will display on hover.",
+        },
+        {
+          name: "alternative",
+          type: "string",
+          title: "Alternative",
+          description: "Important for Accessibility & SEO.",
+        },
+      ],
+    },
   ],
 });

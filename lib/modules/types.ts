@@ -11,3 +11,15 @@ export const BaseModuleZod = z.object({
     .union([z.literal("small"), z.literal("medium"), z.literal("large")])
     .nullable(),
 });
+
+export const SanityImageZod = z.object({
+  alt: z.string().nullish(),
+  caption: z.string().nullish(),
+  lqip: z.string().nullish(),
+  asset: z.object({
+    _ref: z.string(),
+    _type: z.literal("reference"),
+    hotspot: z.any(),
+    crop: z.any(),
+  }),
+});

@@ -1,4 +1,4 @@
-import { ModuleContainer, Chip } from "../../components";
+import { ModuleContainer, Chip, Image } from "../../components";
 import { HomeAboutMeProps } from "./types";
 
 const HomeAboutMeModule: React.FC<HomeAboutMeProps> = (props) => {
@@ -10,12 +10,18 @@ const HomeAboutMeModule: React.FC<HomeAboutMeProps> = (props) => {
       hasSeperator={props.hasSeperator}
     >
       <div className="relative">
-        <img
-          src="/assets/portrait.png"
-          alt="Trainer"
-          className="max-w-[335px] mb-12 rounded-full"
+        <Image
+          type="sanity"
+          width={1000}
+          className=" rounded-full overflow-hidden aspect-square mb-12 w-[99%]"
+          lqip={props.image.lqip}
+          objectFit="cover"
+          asset={props.image.asset}
+          alt={props.image.alt ?? undefined}
+          caption={props.image.caption ?? undefined}
         />
-        <div className="absolute bottom-4 left-4">
+
+        <div className="absolute bottom-8 left-8">
           <Chip>{props.name}</Chip>
         </div>
       </div>

@@ -1,9 +1,21 @@
 import { groq } from "next-sanity";
 
+// START COMPONENTS
+
+const image = `{
+    asset {
+      'crop': ^.crop,
+      'hotspot' : ^.hotspot,
+      ...,
+    },
+    'alt' : alternative,
+    caption,
+    'lqip' : asset->metadata.lqip
+  }`;
+
+// END COMPONENTS
+
 // START MODULES
-
-// END MODULES
-
 const homeLandingModule = `{
     cards[]{
         "key" : _key,
@@ -31,7 +43,8 @@ const homeCoreInfoModule = `{
 const homeAboutmeModule = `{
   title,
   name,
-  body
+  body,
+  image${image}
 }`;
 
 const homeWorkoutsModule = `{
@@ -62,6 +75,8 @@ const homeFaqModule = `{
 const contactModule = `{
   title,
 }`;
+
+// END MODULES
 
 // START PAGES
 
