@@ -27,7 +27,11 @@ export default defineType({
           title: "Hero Body",
           type: "text",
         },
-
+        {
+          name: "image",
+          title: "image",
+          type: "richImage",
+        },
         {
           name: "callToAction",
           title: "Hero Call to Action",

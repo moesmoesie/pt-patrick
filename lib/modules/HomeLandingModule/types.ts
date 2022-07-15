@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { BaseModuleZod } from "../types";
+import { BaseModuleZod, SanityImageZod } from "../types";
 
 const CardZod = z.object({
   title: z.string(),
@@ -19,5 +19,6 @@ export const HomeLandingModuleZod = BaseModuleZod.extend({
     title: z.string(),
     body: z.string(),
     callToAction: z.string(),
+    image: SanityImageZod,
   }),
 });

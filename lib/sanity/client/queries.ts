@@ -26,7 +26,8 @@ const homeLandingModule = `{
     hero{
       title,
       body,
-      callToAction
+      callToAction,
+      image${image}
     }
 }`;
 
