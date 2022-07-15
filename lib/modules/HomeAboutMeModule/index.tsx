@@ -13,7 +13,7 @@ const HomeAboutMeModule: React.FC<HomeAboutMeProps> = (props) => {
         <Image
           type="sanity"
           width={1000}
-          className=" rounded-full overflow-hidden aspect-square mb-12 w-[99%]"
+          className=" mb-12 aspect-square w-[99%] overflow-hidden rounded-full"
           lqip={props.image.lqip}
           objectFit="cover"
           asset={props.image.asset}
@@ -26,7 +26,7 @@ const HomeAboutMeModule: React.FC<HomeAboutMeProps> = (props) => {
         </div>
       </div>
 
-      <h2 className="header-2 font-bold  mb-8">{props.title}</h2>
+      <h2 className="header-2 mb-8  font-bold">{props.title}</h2>
       <p className="font-overpass text-[23px] leading-[36.8px] tracking-[0.02em]">
         {props.body}
       </p>

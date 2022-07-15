@@ -20,39 +20,39 @@ const HomeLandingModule: React.FC<z.infer<typeof HomeLandingModuleZod>> = (
         paddingBottom="none"
         hasSeperator={props.hasSeperator}
       >
-        <div className="large:grid relative pt-20 large:pt-24 grid-cols-2 grid-rows-[min-content,min-content]">
+        <div className="relative grid-cols-2 grid-rows-[min-content,min-content] pt-20 large:grid large:pt-24">
           {/* HERO TEXT */}
           <div className="mb-12 large:mb-20">
-            <h1 className="mb-8 header-1 large:min-w-[800px] font-bold">
+            <h1 className="header-1 mb-8 font-bold large:min-w-[800px]">
               {props.hero.title}
             </h1>
 
-            <p className="font-overpass mb-8 text-[23px] large:text-[27px] leading-[36.8px] tracking-[0.02em]">
+            <p className="mb-8 font-overpass text-[23px] leading-[36.8px] tracking-[0.02em] large:text-[27px]">
               {props.hero.body}
             </p>
 
             <Button>{props.hero.callToAction}</Button>
           </div>
           {/* HERO IMAGE */}
-          <div className="col-[2/3] row-[1/3] hidden large:block relative h-full">
-            <RadialBlur className="w-[700px] scale-[2] absolute hidden large:block left-1/2 top-1/3 -translate-x-1/2 h-[700px]" />
+          <div className="relative col-[2/3] row-[1/3] hidden h-full large:block">
+            <RadialBlur className="absolute left-1/2 top-1/3 hidden h-[700px] w-[700px] -translate-x-1/2 scale-[2] large:block" />
             <Image
               alt={props.hero.image.alt ?? undefined}
               caption={props.hero.image.caption ?? undefined}
               asset={props.hero.image.asset}
               type="sanity"
               width={3000}
-              className="h-full z-[1000] scale-[1.15]"
+              className="z-[1000] h-full scale-[1.15]"
             />
           </div>
           {/* CARDS */}
-          <div className="relative z-[9999] row-[2/3] col-[1/3] pb-20">
+          <div className="relative z-[9999] col-[1/3] row-[2/3] pb-20">
             {/* START BACKGROUND */}
 
-            <RadialBlur className=" large:hidden opacity-70 left-3/4 top-1/2 -translate-y-1/2 -translate-x-1/2 scale-[1.6] absolute" />
+            <RadialBlur className=" absolute left-3/4 top-1/2 -translate-y-1/2 -translate-x-1/2 scale-[1.6] opacity-70 large:hidden" />
 
             {/* END BACKGROUND */}
-            <div className="flex flex-col large:flex-row relative gap-4">
+            <div className="relative flex flex-col gap-4 large:flex-row">
               {props.cards.map((el) => {
                 return (
                   <Card

@@ -18,7 +18,7 @@ const HomeHighlightModudle: React.FC<HomeReviewsModuleProps> = (props) => {
     >
       <div className="relative">
         {/* START BACKGROUND */}
-        <div className="w-[170px] top-1/2 right-0 h-[170px] bg-amethyst blur-[120px] absolute" />
+        <div className="absolute top-1/2 right-0 h-[170px] w-[170px] bg-amethyst blur-[120px]" />
         {/* END BACKGROUND */}
 
         <div className="mb-10">
@@ -46,9 +46,9 @@ const HomeHighlightModudle: React.FC<HomeReviewsModuleProps> = (props) => {
                 <div
                   ref={index == 0 ? element : null}
                   key={index}
-                  className="first:ml-0 ml-5 snap-center last:mr-5"
+                  className="ml-5 snap-center first:ml-0 last:mr-5"
                 >
-                  <div className="bg-white overflow-hidden rounded-lg shadow-lg min-w-[335px]">
+                  <div className="min-w-[335px] overflow-hidden rounded-lg bg-white shadow-lg">
                     <Image
                       type="sanity"
                       alt={el.image.alt ?? undefined}
@@ -59,21 +59,21 @@ const HomeHighlightModudle: React.FC<HomeReviewsModuleProps> = (props) => {
                       asset={el.image.asset}
                     />
 
-                    <div className="p-6 relative">
+                    <div className="relative p-6">
                       <p className="header-4 relative mb-7 whitespace-nowrap font-bold">
                         {el.name}
                       </p>
 
                       <div className="relative">
-                        <p className=" header-1 absolute top-0 text-[150px] -translate-x-7 -translate-y-6 text-gray-400">
+                        <p className=" header-1 absolute top-0 -translate-x-7 -translate-y-6 text-[150px] text-gray-400">
                           “
                         </p>
 
-                        <p className=" header-1 absolute translate-x-4 top-full right-0 text-[150px] origin-center text-gray-400">
+                        <p className=" header-1 absolute top-full right-0 origin-center translate-x-4 text-[150px] text-gray-400">
                           ”
                         </p>
 
-                        <p className="text-gray-900 block body-1 relative right-0 mb-4">
+                        <p className="body-1 relative right-0 mb-4 block text-gray-900">
                           {el.body}
                         </p>
                       </div>
@@ -87,7 +87,7 @@ const HomeHighlightModudle: React.FC<HomeReviewsModuleProps> = (props) => {
           </ContainerScroll>
         </div>
 
-        <div className="flex w-full justify-center mt-2 gap-2">
+        <div className="mt-2 flex w-full justify-center gap-2">
           {props.reviews.map((el, index) => {
             return (
               <div

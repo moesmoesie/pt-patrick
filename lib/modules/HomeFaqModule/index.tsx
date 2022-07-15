@@ -8,7 +8,7 @@ const HomeFaqModule: React.FC<HomeFaqModuleProps> = (props) => {
     <ModuleContainer paddingTop="none">
       <div>
         <h2 className="header-2 mb-12 font-bold">{props.title}</h2>
-        <p className="body-1 text-gray-900 mb-8">
+        <p className="body-1 mb-8 text-gray-900">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
           mauris enim lectus amet, cursus odio vel eu, ut.{" "}
         </p>
@@ -31,24 +31,24 @@ const Question: React.FC<{ title: string; body: string }> = ({
   return (
     <button
       onClick={() => setActive(!active)}
-      className="p-5 flex  flex-col text-left border rounded-sm border-gray-400 "
+      className="flex flex-col  rounded-sm border border-gray-400 p-5 text-left "
     >
-      <div className="flex justify-between w-full items-center gap-3">
+      <div className="flex w-full items-center justify-between gap-3">
         <p className="body-1 font-bold">{title}</p>
         <div
           className={`${
             active ? "rotate-180" : "rotate-0"
-          } transition-transform min-w-[22px] grid place-items-center min-h-[22px] rounded-full bg-black`}
+          } grid min-h-[22px] min-w-[22px] place-items-center rounded-full bg-black transition-transform`}
         >
           <FontAwesomeIcon
-            className="text-white text-[12px]"
+            className="text-[12px] text-white"
             icon={"chevron-down"}
           />
         </div>
       </div>
 
       {active && (
-        <div className="origin-top mt-5 transition-all ">
+        <div className="mt-5 origin-top transition-all ">
           <p className="body-2">{body}</p>
         </div>
       )}

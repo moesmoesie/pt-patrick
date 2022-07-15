@@ -2,7 +2,7 @@ import ContainerProps from "./types";
 
 const Container: React.FC<ContainerProps> = ({ children }) => {
   return (
-    <div className="max-w-[450px] large:max-w-[1280px] relative px-3 mx-auto small:px-5">
+    <div className="relative mx-auto max-w-[450px] px-3 small:px-5 large:max-w-[1280px]">
       {children}
     </div>
   );

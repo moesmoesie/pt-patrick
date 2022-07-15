@@ -5,7 +5,7 @@ const RadialBlur: React.FC<RadialBlurProps> = ({ className }) => {
     <img
       alt="gradient"
       src="/assets/gradients/medium.png"
-      className={`${className} bg-cover pointer-events-none`}
+      className={`${className} pointer-events-none bg-cover`}
     />
   );
 };

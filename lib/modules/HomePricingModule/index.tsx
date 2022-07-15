@@ -9,7 +9,7 @@ const HomePricingModule: React.FC<HomePricingModuleProps> = (props) => {
       paddingBottom={props.paddingBottom}
       hasSeperator={props.hasSeperator}
     >
-      <h2 className="header-2 font-bold mb-12">{props.title}</h2>
+      <h2 className="header-2 mb-12 font-bold">{props.title}</h2>
       <div className="flex flex-col gap-6">
         {props.pricingList.map((el, index) => {
           return (

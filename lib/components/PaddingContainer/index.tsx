@@ -41,7 +41,7 @@ const PaddingContainer: React.FC<PaddingContainerProps> = ({
       >
         {children}
       </div>
-      {hasSeperator && <div className="w-full h-px bg-gray-500/50" />}
+      {hasSeperator && <div className="h-px w-full bg-gray-500/50" />}
     </div>
   );
 };

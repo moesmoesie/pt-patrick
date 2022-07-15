@@ -24,7 +24,7 @@ const Image: React.FC<ImageProps> = (props) => {
             objectFit: props.objectFit,
           }}
           width={props.width}
-          className="absolute w-full h-full"
+          className="absolute h-full w-full"
           src={props.lqip}
           title={props.caption}
           alt={props.alt}
@@ -36,7 +36,7 @@ const Image: React.FC<ImageProps> = (props) => {
           objectFit: props.objectFit,
         }}
         width={props.width}
-        className="w-full h-full relative"
+        className="relative h-full w-full"
         title={props.caption}
         src={urlFor(props.asset)
           .width(props.width)

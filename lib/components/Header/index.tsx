@@ -3,7 +3,7 @@ import Container from "../Container";
 
 const Header: React.FC<HeaderProps> = () => {
   return (
-    <div className="w-full z-[999] bg-white fixed top-0 border-b border-b-gray-300 left-0">
+    <div className="fixed top-0 left-0 z-[999] w-full border-b border-b-gray-300 bg-white">
       <Container>
         <div className="flex py-5">
           <img className="h-6" src="/assets/logo.png" alt="logo" />

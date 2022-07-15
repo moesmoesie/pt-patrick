@@ -10,30 +10,30 @@ const ContactModule: React.FC<ContactModuleProps> = (props) => {
       hasSeperator={true}
       color="#000000"
     >
-      <div className="text-white mt-10">
+      <div className="mt-10 text-white">
         <img
-          className="w-full object-cover h-[355px] rounded-lg -translate-y-10"
+          className="h-[355px] w-full -translate-y-10 rounded-lg object-cover"
           alt="location"
           src="/assets/location.png"
         />
-        <h2 className="header-2 mb-8 font-bold pr-4">{props.title}</h2>
+        <h2 className="header-2 mb-8 pr-4 font-bold">{props.title}</h2>
         <p className="body-1 mb-7">{props.body}</p>
         <div className="flex gap-5">
-          <button className="border border-white rounded-full w-11 h-11 grid place-items-center">
+          <button className="grid h-11 w-11 place-items-center rounded-full border border-white">
             <FontAwesomeIcon
-              className="text-white text-[21px]"
+              className="text-[21px] text-white"
               icon={["fab", "whatsapp"]}
             />
           </button>
-          <button className="border border-white rounded-full w-11 h-11 grid place-items-center">
+          <button className="grid h-11 w-11 place-items-center rounded-full border border-white">
             <FontAwesomeIcon
-              className="text-white text-[21px]"
+              className="text-[21px] text-white"
               icon={["fas", "phone"]}
             />
           </button>
-          <button className="border border-white rounded-full w-11 h-11 grid place-items-center">
+          <button className="grid h-11 w-11 place-items-center rounded-full border border-white">
             <FontAwesomeIcon
-              className="text-white text-[21px]"
+              className="text-[21px] text-white"
               icon={["fas", "envelope"]}
             />
           </button>

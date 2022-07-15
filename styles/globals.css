@@ -4,27 +4,27 @@
 
 @layer components {
   .body-1-small {
-    @apply font-overpass leading-[1.6] text-[19px];
+    @apply font-overpass text-[19px] leading-[1.6];
   }
 
   .body-2-small {
-    @apply font-overpass leading-[1.6] text-[16px];
+    @apply font-overpass text-[16px] leading-[1.6];
   }
 
   .body-3-small {
-    @apply font-overpass leading-[1.6] text-[12px];
+    @apply font-overpass text-[12px] leading-[1.6];
   }
 
   .body-1-large {
-    @apply font-overpass leading-[1.6] text-[21px];
+    @apply font-overpass text-[21px] leading-[1.6];
   }
 
   .body-2-large {
-    @apply font-overpass leading-[1.6] text-[16px];
+    @apply font-overpass text-[16px] leading-[1.6];
   }
 
   .body-3-large {
-    @apply font-overpass leading-[1.6] text-[12px];
+    @apply font-overpass text-[12px] leading-[1.6];
   }
 
   .body-1 {
@@ -42,43 +42,43 @@
   /* HEADERS */
 
   .header-1-small {
-    @apply font-rubik leading-[1] text-[48px];
+    @apply font-rubik text-[48px] leading-[1];
   }
 
   .header-2-small {
-    @apply font-rubik leading-[1] text-[40px];
+    @apply font-rubik text-[40px] leading-[1];
   }
 
   .header-3-small {
-    @apply font-rubik leading-[1.1] text-[33px];
+    @apply font-rubik text-[33px] leading-[1.1];
   }
 
   .header-4-small {
-    @apply font-rubik leading-[1.3] text-[28px];
+    @apply font-rubik text-[28px] leading-[1.3];
   }
 
   .header-5-small {
-    @apply font-rubik leading-[1] text-[23px];
+    @apply font-rubik text-[23px] leading-[1];
   }
 
   .header-1-large {
-    @apply font-rubik leading-[1] text-[80px];
+    @apply font-rubik text-[80px] leading-[1];
   }
 
   .header-2-large {
-    @apply font-rubik leading-[1.1] text-[61px];
+    @apply font-rubik text-[61px] leading-[1.1];
   }
 
   .header-3-large {
-    @apply font-rubik leading-[1.1] text-[47px];
+    @apply font-rubik text-[47px] leading-[1.1];
   }
 
   .header-4-large {
-    @apply font-rubik leading-[1.3] text-[36px];
+    @apply font-rubik text-[36px] leading-[1.3];
   }
 
   .header-5-large {
-    @apply font-rubik leading-[1.4] text-[27px];
+    @apply font-rubik text-[27px] leading-[1.4];
   }
 
   .header-1 {

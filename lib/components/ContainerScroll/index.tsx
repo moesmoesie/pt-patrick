@@ -5,10 +5,10 @@ const ContainerScroll: React.FC<ContainerScrollProps> = (props) => {
   return (
     <div
       onScroll={props.onScroll}
-      className={`${props.className} relative hide-scrollbar overflow-x-scroll snap-x snap-mandatory`}
+      className={`${props.className} hide-scrollbar relative snap-x snap-mandatory overflow-x-scroll`}
     >
       <Container>
-        <div className="flex absolute">{props.children}</div>
+        <div className="absolute flex">{props.children}</div>
       </Container>
     </div>
   );

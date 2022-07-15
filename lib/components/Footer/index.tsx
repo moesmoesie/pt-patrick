@@ -4,8 +4,8 @@ const Footer: React.FC = () => {
   return (
     <ModuleContainer paddingTop="small" paddingBottom="small" color="#000000">
       <footer>
-        <nav className="text-white mb-6 body-2">
-          <ul className="flex gap-x-6 gap-y-2 flex-wrap">
+        <nav className="body-2 mb-6 text-white">
+          <ul className="flex flex-wrap gap-x-6 gap-y-2">
             <li>
               <a href="#">Privacy Policy</a>
             </li>

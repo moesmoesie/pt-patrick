@@ -17,13 +17,13 @@ const HomeWorkoutsModule: React.FC<HomeWorkoutsModuleProps> = (props) => {
     >
       <div>
         <Container>
-          <h2 className="header-2 font-bold mb-12">{props.title}</h2>
+          <h2 className="header-2 mb-12 font-bold">{props.title}</h2>
         </Container>
 
         <ContainerScroll className="h-[300px]">
           {props.workouts.map((el, index) => {
             return (
-              <div key={index} className="first:ml-0 ml-6 last:mr-6">
+              <div key={index} className="ml-6 first:ml-0 last:mr-6">
                 <WorkoutCard {...el} />
               </div>
             );
@@ -42,14 +42,14 @@ const WorkoutCard: React.FC<WorkoutProps> = (workout) => {
       onClick={() => {
         setActive(!isActive);
       }}
-      className="w-[288px] relative items-start flex flex-col justify-end min-w-[288px] h-[288px] overflow-hidden rounded-lg"
+      className="relative flex h-[288px] w-[288px] min-w-[288px] flex-col items-start justify-end overflow-hidden rounded-lg"
     >
-      <div className="w-full flex overflow-hidden flex-col items-start p-6 rounded-lg z-50 h-[222px] absolute bottom-0">
+      <div className="absolute bottom-0 z-50 flex h-[222px] w-full flex-col items-start overflow-hidden rounded-lg p-6">
         {isActive && (
           <>
-            <div className="w-full h-full absolute top-0 left-0 backdrop-blur-md" />
-            <div className="w-full h-full absolute top-0 left-0 bg-white/95 supports-backdrop-filter:bg-white/60" />
-            <div className="relative flex gap-[10px] flex-col items-start mb-[10px]">
+            <div className="absolute top-0 left-0 h-full w-full backdrop-blur-md" />
+            <div className="absolute top-0 left-0 h-full w-full bg-white/95 supports-backdrop-filter:bg-white/60" />
+            <div className="relative mb-[10px] flex flex-col items-start gap-[10px]">
               <Chip>{workout.name}</Chip>
               <p className="body-2">{workout.description}</p>
             </div>
@@ -57,7 +57,7 @@ const WorkoutCard: React.FC<WorkoutProps> = (workout) => {
         )}
       </div>
 
-      <div className="absolute w-full h-full top-0 left-0">
+      <div className="absolute top-0 left-0 h-full w-full">
         <Image
           type="sanity"
           width={300}
@@ -66,11 +66,11 @@ const WorkoutCard: React.FC<WorkoutProps> = (workout) => {
           asset={workout.image.asset}
           lqip={workout.image.lqip}
           objectFit="cover"
-          className="w-full h-full absolute"
+          className="absolute h-full w-full"
         />
       </div>
 
-      <div className="ml-4 relative mb-4">
+      <div className="relative ml-4 mb-4">
         <Chip>{workout.name}</Chip>
       </div>
     </div>

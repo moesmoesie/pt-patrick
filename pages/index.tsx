@@ -18,9 +18,9 @@ interface Props {
 
 const Home: NextPage<Props> = ({ preview, page }) => {
   return (
-    <div className="relative w-full min-h-screen">
+    <div className="relative min-h-screen w-full">
       <Header />
-      <div className="pt-[2rem] overflow-hidden">
+      <div className="overflow-hidden pt-[2rem]">
         {page.modules.map((el) => {
           return <Module {...el} key={el.key} />;
         })}

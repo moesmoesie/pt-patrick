@@ -16,13 +16,13 @@ const HomeHighlightModudle: React.FC<HomeHighlightModuleProps> = (props) => {
         asset={props.image.asset}
         width={500}
         objectFit="cover"
-        className="w-full object-cover h-[355px] overflow-hidden rounded-lg -translate-y-10"
+        className="h-[355px] w-full -translate-y-10 overflow-hidden rounded-lg object-cover"
       />
-      <p className="header-2 text-white font-bold mb-10">{props.title}</p>
-      <p className="body-1 text-white mb-10">{props.body}</p>
-      <button className="font-rubik border border-white px-4 py-1 font-medium text-white">
+      <p className="header-2 mb-10 font-bold text-white">{props.title}</p>
+      <p className="body-1 mb-10 text-white">{props.body}</p>
+      <button className="border border-white px-4 py-1 font-rubik font-medium text-white">
         <FontAwesomeIcon className="text-[14px]" icon="play" />
-        <span className="underline ml-2">Watch Video</span>
+        <span className="ml-2 underline">Watch Video</span>
       </button>
     </ModuleContainer>
   );

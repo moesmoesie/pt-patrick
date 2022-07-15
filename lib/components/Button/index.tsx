@@ -2,7 +2,7 @@ import ButtonProps from "./types";
 
 const Button: React.FC<ButtonProps> = (props) => {
   return (
-    <button className="bg-black font-rubik font-medium text-[16px] tracking-[2%] leadning-[16px] px-9 py-3 rounded-sm text-white">
+    <button className="leadning-[16px] rounded-sm bg-black px-9 py-3 font-rubik text-[16px] font-medium tracking-[2%] text-white">
       {props.children}
     </button>
   );
