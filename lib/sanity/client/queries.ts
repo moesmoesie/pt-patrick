@@ -59,7 +59,8 @@ const homeWorkoutsModule = `{
 
 const homeHighlightModule = `{
   title,
-  body
+  body,
+  image${image}
 }`;
 
 const homeReviewsModule = `{

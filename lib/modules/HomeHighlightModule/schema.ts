@@ -20,5 +20,11 @@ export default defineType({
       title: "Body",
       type: "text",
     },
+
+    {
+      name: "image",
+      title: "Image",
+      type: "richImage",
+    },
   ],
 });
