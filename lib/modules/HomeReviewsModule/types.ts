@@ -1,9 +1,17 @@
 import { z } from "zod";
-import { BaseModuleZod } from "../types";
+import { BaseModuleZod, SanityImageZod } from "../types";
+
+const ReviewZod = z.object({
+  name: z.string(),
+  title: z.string(),
+  body: z.string(),
+  image: SanityImageZod,
+});
 
 export const HomeReviewsModuleZod = BaseModuleZod.extend({
   type: z.literal("homeReviewsModule"),
   title: z.string(),
+  reviews: ReviewZod.array(),
 });
 
 export type HomeReviewsModuleProps = z.infer<typeof HomeReviewsModuleZod>;

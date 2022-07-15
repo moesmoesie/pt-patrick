@@ -65,6 +65,12 @@ const homeHighlightModule = `{
 
 const homeReviewsModule = `{
   title,
+  reviews[]{
+    name,
+    title,
+    body,
+    image${image}
+  }
 }`;
 
 const homePricingModule = `{

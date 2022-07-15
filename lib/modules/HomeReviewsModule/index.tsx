@@ -1,5 +1,10 @@
 import { HomeReviewsModuleProps } from "./types";
-import { PaddingContainer, Container, ContainerScroll } from "../../components";
+import {
+  PaddingContainer,
+  Container,
+  ContainerScroll,
+  Image,
+} from "../../components";
 import React, { useRef, useState } from "react";
 const HomeHighlightModudle: React.FC<HomeReviewsModuleProps> = (props) => {
   const element = useRef<HTMLDivElement>(null);
@@ -36,7 +41,7 @@ const HomeHighlightModudle: React.FC<HomeReviewsModuleProps> = (props) => {
               }
             }}
           >
-            {[1, 2, 3, 4, 5].map((el, index) => {
+            {props.reviews.map((el, index) => {
               return (
                 <div
                   ref={index == 0 ? element : null}
@@ -44,14 +49,19 @@ const HomeHighlightModudle: React.FC<HomeReviewsModuleProps> = (props) => {
                   className="first:ml-0 ml-5 snap-center last:mr-5"
                 >
                   <div className="bg-white overflow-hidden rounded-lg shadow-lg min-w-[335px]">
-                    <img
-                      alt="Reviewer"
+                    <Image
+                      type="sanity"
+                      alt={el.image.alt ?? undefined}
+                      caption={el.image.caption ?? undefined}
+                      width={400}
+                      objectFit="cover"
                       className="w-full"
-                      src="/assets/reviewer.png"
+                      asset={el.image.asset}
                     />
+
                     <div className="p-6 relative">
                       <p className="header-4 relative mb-7 whitespace-nowrap font-bold">
-                        Edward Salvadore
+                        {el.name}
                       </p>
 
                       <div className="relative">
@@ -64,14 +74,11 @@ const HomeHighlightModudle: React.FC<HomeReviewsModuleProps> = (props) => {
                         </p>
 
                         <p className="text-gray-900 block body-1 relative right-0 mb-4">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Sagittis, mauris, senectus semper ac justo.
+                          {el.body}
                         </p>
                       </div>
 
-                      <p className="body-1 font-bold text-black">
-                        Construction worker
-                      </p>
+                      <p className="body-1 font-bold text-black">{el.title}</p>
                     </div>
                   </div>
                 </div>
@@ -80,31 +87,21 @@ const HomeHighlightModudle: React.FC<HomeReviewsModuleProps> = (props) => {
           </ContainerScroll>
         </div>
 
-        <Picker currentLevel={currentLevel} />
-      </div>
-    </PaddingContainer>
-  );
-};
-
-const Picker: React.FC<{ currentLevel: number }> = (props) => {
-  return (
-    <div className="flex w-full justify-center mt-2 gap-2">
-      {[1, 2, 3, 4, 5].map((el, index) => {
-        return (
-          <div
-            key={index}
-            className={`
-                ${
-                  props.currentLevel == index
-                    ? "w-8 bg-amethyst"
-                    : "w-3 bg-black"
-                }
+        <div className="flex w-full justify-center mt-2 gap-2">
+          {props.reviews.map((el, index) => {
+            return (
+              <div
+                key={index}
+                className={`
+                ${currentLevel == index ? "w-8 bg-amethyst" : "w-3 bg-black"}
                 h-3 rounded-full transition-all
             `}
-          />
-        );
-      })}
-    </div>
+              />
+            );
+          })}
+        </div>
+      </div>
+    </PaddingContainer>
   );
 };
 
