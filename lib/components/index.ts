@@ -10,3 +10,4 @@ export { default as PricingCard } from "./PricingCard";
 export { default as Footer } from "./Footer";
 export { default as PaddingContainer } from "./PaddingContainer";
 export { default as Image } from "./Image";
+export { default as RadialBlur } from "./RadialBlur";
