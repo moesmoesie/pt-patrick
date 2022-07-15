@@ -40,7 +40,11 @@ export default defineType({
               title: "Body",
               type: "text",
             },
-
+            {
+              name: "image",
+              title: "Image",
+              type: "richImage",
+            },
             {
               name: "keywords",
               title: "Keywords",
@@ -48,6 +52,21 @@ export default defineType({
               of: [{ type: "string" }],
             },
           ],
+          preview: {
+            select: {
+              title: "value",
+              subtitle: "title",
+              image: "image",
+            },
+            prepare(value, viewOptions?) {
+              const { title, subtitle, image } = value as any;
+              return {
+                title: title,
+                subtitle,
+                media: image,
+              };
+            },
+          },
         },
       ],
     },

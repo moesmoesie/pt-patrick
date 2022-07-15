@@ -1,11 +1,12 @@
 import { z } from "zod";
 
-import { BaseModuleZod } from "../types";
+import { BaseModuleZod, SanityImageZod } from "../types";
 
 export const CorePillarZod = z.object({
   value: z.string(),
   title: z.string(),
   body: z.string(),
+  image: SanityImageZod,
   keywords: z.string().array(),
 });
 

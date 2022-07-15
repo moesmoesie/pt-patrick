@@ -36,6 +36,7 @@ const homeCoreInfoModule = `{
     value,
     title,
     body,
+    image${image},
     keywords
   }
 }`;
