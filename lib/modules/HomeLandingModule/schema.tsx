@@ -1,4 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { defineType } from "sanity";
+import React from "react";
 
 export default defineType({
   title: "Home Landing Module",
@@ -59,6 +61,23 @@ export default defineType({
               type: "text",
             },
           ],
+          preview: {
+            select: {
+              title: "title",
+              subtitle: "body",
+              icon: "icon",
+            },
+            prepare(value, viewOptions?) {
+              const { title, subtitle, icon } = value as any;
+              return {
+                title,
+                subtitle,
+                media: (
+                  <FontAwesomeIcon icon={[icon?.package, icon?.name ?? ""]} />
+                ),
+              };
+            },
+          },
         },
       ],
     },

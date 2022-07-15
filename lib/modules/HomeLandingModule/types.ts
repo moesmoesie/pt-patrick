@@ -6,7 +6,10 @@ const CardZod = z.object({
   title: z.string(),
   body: z.string(),
   key: z.string().optional(),
-  icon: z.string(),
+  icon: z.object({
+    package: z.string(),
+    name: z.string(),
+  }),
 });
 
 export const HomeLandingModuleZod = BaseModuleZod.extend({

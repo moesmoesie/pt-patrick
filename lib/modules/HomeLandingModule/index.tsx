@@ -35,7 +35,11 @@ const HomeLandingModule: React.FC<z.infer<typeof HomeLandingModuleZod>> = (
             return (
               <Card
                 key={el.key}
-                icon={<FontAwesomeIcon icon={el.icon as any} />}
+                icon={
+                  <FontAwesomeIcon
+                    icon={[el.icon.package, el.icon.name] as any}
+                  />
+                }
                 title={el.title}
                 body={el.body}
               />
