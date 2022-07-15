@@ -75,6 +75,14 @@ const homeReviewsModule = `{
 
 const homePricingModule = `{
   title,
+  pricingList[]{
+    caption,
+    price,
+    priceSubtitle,
+    body,
+    bulletPoints,
+    callToAction,
+  }
 }`;
 
 const homeFaqModule = `{
