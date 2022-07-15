@@ -1,9 +1,10 @@
 import { z } from "zod";
-import { BaseModuleZod } from "../types";
+import { BaseModuleZod, SanityImageZod } from "../types";
 
 export const WorkoutZod = z.object({
   name: z.string(),
   description: z.string(),
+  image: SanityImageZod,
 });
 
 export type WorkoutProps = z.infer<typeof WorkoutZod>;

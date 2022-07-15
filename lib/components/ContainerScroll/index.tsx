@@ -4,11 +4,8 @@ import ContainerScrollProps from "./types";
 const ContainerScroll: React.FC<ContainerScrollProps> = (props) => {
   return (
     <div
-      style={{
-        height: props.height,
-      }}
       onScroll={props.onScroll}
-      className="relative hide-scrollbar overflow-x-scroll snap-x snap-mandatory"
+      className={`${props.className} relative hide-scrollbar overflow-x-scroll snap-x snap-mandatory`}
     >
       <Container>
         <div className="flex absolute">{props.children}</div>

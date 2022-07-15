@@ -27,7 +27,27 @@ export default defineType({
               title: "Description",
               type: "text",
             },
+            {
+              name: "image",
+              title: "Image",
+              type: "richImage",
+            },
           ],
+          preview: {
+            select: {
+              title: "name",
+              subtitle: "description",
+              image: "image",
+            },
+            prepare(value, viewOptions?) {
+              const { title, subtitle, image } = value as any;
+              return {
+                title,
+                subtitle,
+                media: image,
+              };
+            },
+          },
         },
       ],
     },

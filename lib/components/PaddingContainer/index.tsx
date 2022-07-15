@@ -4,14 +4,16 @@ const PaddingContainer: React.FC<PaddingContainerProps> = ({
   color,
   paddingBottom = "medium",
   paddingTop = "medium",
+  hasSeperator = false,
   children,
 }) => {
   return (
-    <div
-      style={{
-        background: color ?? "",
-      }}
-      className={`
+    <div>
+      <div
+        style={{
+          background: color ?? "",
+        }}
+        className={`
           ${
             paddingBottom == "small"
               ? "pb-[40px]"
@@ -36,8 +38,10 @@ const PaddingContainer: React.FC<PaddingContainerProps> = ({
               : ""
           }
           `}
-    >
-      {children}
+      >
+        {children}
+      </div>
+      {hasSeperator && <div className="w-full h-px bg-gray-500/50" />}
     </div>
   );
 };

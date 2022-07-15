@@ -24,6 +24,7 @@ const HomeHighlightModudle: React.FC<HomeReviewsModuleProps> = (props) => {
 
         <div>
           <ContainerScroll
+            className="h-[600px] large:h-[650px]"
             onScroll={(e) => {
               const level = Math.floor(
                 (e.currentTarget.scrollLeft + 10) /
@@ -34,14 +35,13 @@ const HomeHighlightModudle: React.FC<HomeReviewsModuleProps> = (props) => {
                 setCurrentLevel(level);
               }
             }}
-            height="600px"
           >
             {[1, 2, 3, 4, 5].map((el, index) => {
               return (
                 <div
                   ref={index == 0 ? element : null}
                   key={index}
-                  className="first:ml-0 ml-5 snap-center last:pr-5"
+                  className="first:ml-0 ml-5 snap-center last:mr-5"
                 >
                   <div className="bg-white overflow-hidden rounded-lg shadow-lg min-w-[335px]">
                     <img

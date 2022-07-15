@@ -52,7 +52,8 @@ const homeWorkoutsModule = `{
   title,
   workouts[]{
     name,
-    description
+    description,
+    image${image}
   }
 }`;
 
