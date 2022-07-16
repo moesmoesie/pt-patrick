@@ -108,7 +108,7 @@ const contactModule = `{
 // START PAGES
 
 export const homeQuery = /* groq */ `
-  *[_type == 'homePage']{
+  *[_type == 'homePage' && _id == 'homePage']{
     _id,
     title,
     description,

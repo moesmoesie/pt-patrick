@@ -5,6 +5,11 @@ export default defineType({
   type: "document",
   fields: [
     {
+      title: "Module Identifier",
+      name: "module_identifier",
+      type: "string",
+    },
+    {
       name: "title",
       title: "Title",
       type: "editor-highlighter",
