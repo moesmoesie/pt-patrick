@@ -12,7 +12,7 @@ const priceZod = z.object({
 
 export const HomePricingModuleZod = BaseModuleZod.extend({
   type: z.literal("homePricingModule"),
-  title: z.string(),
+  title: z.any(),
   pricingList: priceZod.array().min(3).max(3),
 });
 

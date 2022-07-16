@@ -13,7 +13,7 @@ export default defineType({
     {
       title: "Title",
       name: "title",
-      type: "string",
+      type: "editor-highlighter",
     },
     {
       title: "Core Pillars",

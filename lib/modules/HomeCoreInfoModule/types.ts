@@ -14,7 +14,7 @@ export type CorePillarProps = z.infer<typeof CorePillarZod>;
 
 export const HomeCoreInfoModuleZod = BaseModuleZod.extend({
   type: z.literal("homeCoreInfoModule"),
-  title: z.string(),
+  title: z.any(),
   corePillars: CorePillarZod.array(),
 });
 

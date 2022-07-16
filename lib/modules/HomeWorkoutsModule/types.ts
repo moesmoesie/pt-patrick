@@ -11,7 +11,7 @@ export type WorkoutProps = z.infer<typeof WorkoutZod>;
 
 export const HomeWorkoutsModuleZod = BaseModuleZod.extend({
   type: z.literal("homeWorkoutsModule"),
-  title: z.string(),
+  title: z.any(),
   workouts: WorkoutZod.array(),
 });
 

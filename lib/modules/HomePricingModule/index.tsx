@@ -1,5 +1,6 @@
 import { HomePricingModuleProps } from "./types";
 import { ModuleContainer, PricingCard } from "../../components";
+import RichText from "../../components/RichText";
 
 const HomePricingModule: React.FC<HomePricingModuleProps> = (props) => {
   return (
@@ -9,7 +10,9 @@ const HomePricingModule: React.FC<HomePricingModuleProps> = (props) => {
       paddingBottom={props.paddingBottom}
       hasSeperator={props.hasSeperator}
     >
-      <h2 className="header-2 mb-12 font-bold">{props.title}</h2>
+      <h2 className="header-2 mb-12 max-w-2xl font-bold">
+        <RichText content={props.title} />
+      </h2>
       <div className="flex flex-col gap-6 large:flex-row">
         {props.pricingList.map((el, index) => {
           return (

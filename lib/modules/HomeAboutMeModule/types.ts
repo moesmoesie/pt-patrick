@@ -3,7 +3,7 @@ import { BaseModuleZod, SanityImageZod } from "../types";
 
 export const HomeAboutMeModuleZod = BaseModuleZod.extend({
   type: z.literal("homeAboutMeModule"),
-  title: z.string(),
+  title: z.any(),
   body: z.string(),
   name: z.string(),
   image: SanityImageZod,

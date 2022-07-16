@@ -8,6 +8,7 @@ import {
 } from "../../components";
 import { HomeLandingModuleZod } from "./types";
 import { z } from "zod";
+import RichText from "../../components/RichText";
 
 const HomeLandingModule: React.FC<z.infer<typeof HomeLandingModuleZod>> = (
   props
@@ -24,7 +25,7 @@ const HomeLandingModule: React.FC<z.infer<typeof HomeLandingModuleZod>> = (
           {/* HERO TEXT */}
           <div className="mb-12 large:mb-20">
             <h1 className="header-1 mb-8 font-bold large:min-w-[800px]">
-              {props.hero.title}
+              <RichText content={props.hero.title} />
             </h1>
 
             <p className="mb-8 font-overpass text-[23px] leading-[36.8px] tracking-[0.02em] large:text-[27px]">

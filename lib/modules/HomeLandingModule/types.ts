@@ -16,7 +16,7 @@ export const HomeLandingModuleZod = BaseModuleZod.extend({
   type: z.literal("homeLandingModule"),
   cards: z.array(CardZod).min(3).max(3),
   hero: z.object({
-    title: z.string(),
+    title: z.any(),
     body: z.string(),
     callToAction: z.string(),
     image: SanityImageZod,

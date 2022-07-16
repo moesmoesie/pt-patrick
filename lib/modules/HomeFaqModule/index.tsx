@@ -2,6 +2,7 @@ import { HomeFaqModuleProps } from "./types";
 import { ModuleContainer } from "../../components";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import RichText from "../../components/RichText";
 
 const HomeFaqModule: React.FC<HomeFaqModuleProps> = (props) => {
   return (
@@ -12,7 +13,9 @@ const HomeFaqModule: React.FC<HomeFaqModuleProps> = (props) => {
     >
       <div className="large:flex large:gap-10">
         <div className="flex-1">
-          <h2 className="header-2 mb-12 font-bold">{props.title}</h2>
+          <h2 className="header-2 mb-12 font-bold">
+            <RichText content={props.title} />
+          </h2>
           <p className="body-1 mb-8 text-gray-900">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
             mauris enim lectus amet, cursus odio vel eu, ut.

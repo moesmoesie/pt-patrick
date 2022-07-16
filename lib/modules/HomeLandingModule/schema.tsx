@@ -19,8 +19,8 @@ export default defineType({
       fields: [
         {
           name: "title",
-          title: "Hero Title",
-          type: "text",
+          title: "Title",
+          type: "editor-highlighter",
         },
         {
           name: "body",

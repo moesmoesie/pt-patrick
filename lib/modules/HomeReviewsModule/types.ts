@@ -10,7 +10,7 @@ const ReviewZod = z.object({
 
 export const HomeReviewsModuleZod = BaseModuleZod.extend({
   type: z.literal("homeReviewsModule"),
-  title: z.string(),
+  title: z.any(),
   reviews: ReviewZod.array(),
 });
 

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Chip, ModuleContainer, Image } from "../../components";
+import RichText from "../../components/RichText";
 import { HomeCoreInfoModuleProps, CorePillarProps } from "./types";
 
 const CoreInfoModule: React.FC<HomeCoreInfoModuleProps> = (props) => {
@@ -13,7 +14,9 @@ const CoreInfoModule: React.FC<HomeCoreInfoModuleProps> = (props) => {
       hasSeperator={true}
     >
       <div>
-        <h2 className="header-2 mb-12 font-bold large:mb-20">{props.title}</h2>
+        <h2 className="header-2 mb-12 max-w-2xl font-bold large:mb-20">
+          <RichText content={props.title} />
+        </h2>
         <div className=" large:flex large:gap-14">
           <div className="hidden large:block">
             <div>

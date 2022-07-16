@@ -14,7 +14,7 @@ export default defineType({
     {
       name: "title",
       title: "Title",
-      type: "string",
+      type: "editor-highlighter",
     },
     {
       name: "pricingList",
@@ -56,7 +56,6 @@ export default defineType({
               type: "string",
             },
           ],
-          validation: (rule) => rule.min(3).max(3),
           preview: {
             select: {
               title: "caption",

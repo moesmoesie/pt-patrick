@@ -7,6 +7,7 @@ import {
   RadialBlur,
 } from "../../components";
 import React, { useRef, useState } from "react";
+import RichText from "../../components/RichText";
 const HomeHighlightModudle: React.FC<HomeReviewsModuleProps> = (props) => {
   const element = useRef<HTMLDivElement>(null);
   const [currentLevel, setCurrentLevel] = useState(0);
@@ -23,7 +24,9 @@ const HomeHighlightModudle: React.FC<HomeReviewsModuleProps> = (props) => {
 
           <div className="mb-10">
             <Container>
-              <p className="header-2 font-bold">{props.title}</p>
+              <h2 className="header-2 max-w-2xl font-bold">
+                <RichText content={props.title} />
+              </h2>
             </Container>
           </div>
 

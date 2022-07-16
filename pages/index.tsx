@@ -36,7 +36,6 @@ export const getStaticProps: GetStaticProps<Props> = async ({
 }) => {
   const data = await getClient(preview).fetch(query);
   const page = filterDataToSingleItem(data, preview);
-  console.log(page.modules[1]);
   HomePageZod.parse(page);
 
   return {

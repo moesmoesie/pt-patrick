@@ -1,6 +1,7 @@
 import { HomeHighlightModuleProps } from "./types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ModuleContainer, Image } from "../../components";
+import RichText from "../../components/RichText";
 const HomeHighlightModudle: React.FC<HomeHighlightModuleProps> = (props) => {
   return (
     <ModuleContainer
@@ -22,7 +23,9 @@ const HomeHighlightModudle: React.FC<HomeHighlightModuleProps> = (props) => {
           />
         </div>
         <div className="flex-1 pb-20 large:py-28">
-          <p className="header-2 mb-10 font-bold text-white">{props.title}</p>
+          <h2 className="header-2 mb-10 font-bold text-white">
+            {<RichText content={props.title} />}
+          </h2>
           <p className="body-1 mb-10 text-white large:max-w-[500px]">
             {props.body}
           </p>

@@ -7,6 +7,7 @@ import {
 } from "../../components";
 import { Chip } from "../../components";
 import { useState } from "react";
+import RichText from "../../components/RichText";
 
 const HomeWorkoutsModule: React.FC<HomeWorkoutsModuleProps> = (props) => {
   return (
@@ -17,7 +18,9 @@ const HomeWorkoutsModule: React.FC<HomeWorkoutsModuleProps> = (props) => {
     >
       <div>
         <Container>
-          <h2 className="header-2 mb-12 font-bold">{props.title}</h2>
+          <h2 className="header-2 mb-12 max-w-2xl font-bold">
+            <RichText content={props.title} />
+          </h2>
         </Container>
 
         <ContainerScroll className="h-[300px]">

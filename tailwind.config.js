@@ -7,6 +7,7 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./lib/components/**/*.{js,ts,jsx,tsx}",
     "./lib/modules/**/*.{js,ts,jsx,tsx}",
+    "./lib/sanity/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     dropShadow: {

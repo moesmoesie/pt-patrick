@@ -1,6 +1,7 @@
 import { ContactModuleProps } from "./types";
 import { Image, ModuleContainer } from "../../components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import RichText from "../../components/RichText";
 
 const ContactModule: React.FC<ContactModuleProps> = (props) => {
   return (
@@ -23,7 +24,9 @@ const ContactModule: React.FC<ContactModuleProps> = (props) => {
         </div>
 
         <div className="large:py-28">
-          <h2 className="header-2 mb-8 pr-4 font-bold">{props.title}</h2>
+          <h2 className="header-2 mb-8 pr-4 font-bold">
+            <RichText content={props.title} />
+          </h2>
           <p className="body-1 mb-7">{props.body}</p>
           <div className="flex gap-5">
             <button className="grid h-11 w-11 place-items-center rounded-full border border-white">

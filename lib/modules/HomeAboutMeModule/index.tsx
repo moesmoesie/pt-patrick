@@ -1,4 +1,5 @@
 import { ModuleContainer, Chip, Image, RadialBlur } from "../../components";
+import RichText from "../../components/RichText";
 import { HomeAboutMeProps } from "./types";
 
 const HomeAboutMeModule: React.FC<HomeAboutMeProps> = (props) => {
@@ -32,7 +33,9 @@ const HomeAboutMeModule: React.FC<HomeAboutMeProps> = (props) => {
         </div>
 
         <div className="large:flex-2">
-          <h2 className="header-2 mb-8  font-bold">{props.title}</h2>
+          <h2 className="header-2 mb-8  font-bold">
+            <RichText content={props.title} />
+          </h2>
           <p className="font-overpass text-[23px] leading-[1.6] tracking-[0.02em] medium:text-[27px] ">
             {props.body}
           </p>
