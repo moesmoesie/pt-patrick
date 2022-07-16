@@ -20,6 +20,11 @@ export default defineType({
       type: "text",
     },
     {
+      title: "Image",
+      name: "image",
+      type: "richImage",
+    },
+    {
       title: "Whatsapp",
       name: "whatsapp",
       type: "string",

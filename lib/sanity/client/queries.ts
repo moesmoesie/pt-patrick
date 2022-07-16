@@ -99,7 +99,8 @@ const contactModule = `{
   body,
   whatsapp,
   email,
-  phone
+  phone,
+  image${image}
 }`;
 
 // END MODULES
