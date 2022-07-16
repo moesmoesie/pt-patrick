@@ -1,5 +1,6 @@
+import { title } from "process";
 import { defineType } from "sanity";
-import { modulesTypes } from "../utils";
+import { modulesTypes, findModuleIcon } from "../utils";
 
 export default defineType({
   name: "moduleContainer",
@@ -87,6 +88,14 @@ export default defineType({
     select: {
       title: "module.module_identifier",
       subtitle: "module._type",
+    },
+    prepare(value, viewOptions?) {
+      const { title, subtitle } = value as any;
+      return {
+        title,
+        subtitle,
+        media: findModuleIcon(subtitle),
+      };
     },
   },
 });
