@@ -14,26 +14,28 @@ const CoreInfoModule: React.FC<HomeCoreInfoModuleProps> = (props) => {
     >
       <div>
         <h2 className="header-2 mb-12 font-bold large:mb-20">{props.title}</h2>
-        <div className="hidden gap-14 large:flex">
-          <div>
-            <ul className=" flex  flex-col gap-11 pr-6">
-              {props.corePillars.map((el) => {
-                return (
-                  <li key={el.value}>
-                    <button
-                      onClick={() => setValue(el)}
-                      className={`${
-                        value.value === el.value
-                          ? "text-black"
-                          : "text-gray-500"
-                      } header-3 font-bold`}
-                    >
-                      {el.value}
-                    </button>
-                  </li>
-                );
-              })}
-            </ul>
+        <div className=" large:flex large:gap-14">
+          <div className="hidden large:block">
+            <div>
+              <ul className=" flex  flex-col gap-11 pr-6">
+                {props.corePillars.map((el) => {
+                  return (
+                    <li key={el.value}>
+                      <button
+                        onClick={() => setValue(el)}
+                        className={`${
+                          value.value === el.value
+                            ? "text-black"
+                            : "text-gray-500"
+                        } header-3 font-bold`}
+                      >
+                        {el.value}
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           </div>
           <div>
             <div className="relative mb-12 h-[290px] w-full overflow-hidden rounded-lg large:h-[350px]">
