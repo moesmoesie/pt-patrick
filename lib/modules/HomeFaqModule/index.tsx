@@ -5,14 +5,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const HomeFaqModule: React.FC<HomeFaqModuleProps> = (props) => {
   return (
-    <ModuleContainer paddingTop="none">
-      <div>
-        <h2 className="header-2 mb-12 font-bold">{props.title}</h2>
-        <p className="body-1 mb-8 text-gray-900">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-          mauris enim lectus amet, cursus odio vel eu, ut.{" "}
-        </p>
-        <div className="flex flex-col gap-5">
+    <ModuleContainer
+      color={props.backgroundColor}
+      paddingBottom={props.paddingBottom}
+      paddingTop={props.paddingTop}
+    >
+      <div className="large:flex large:gap-10">
+        <div className="flex-1">
+          <h2 className="header-2 mb-12 font-bold">{props.title}</h2>
+          <p className="body-1 mb-8 text-gray-900">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+            mauris enim lectus amet, cursus odio vel eu, ut.
+          </p>
+        </div>
+
+        <div className="flex flex-[2] flex-col gap-5">
           {props.questions.map((e, index) => {
             return <Question key={index} title={e.title} body={e.body} />;
           })}
@@ -49,7 +56,7 @@ const Question: React.FC<{ title: string; body: string }> = ({
 
       {active && (
         <div className="mt-5 origin-top transition-all ">
-          <p className="body-2">{body}</p>
+          <p className="body-2 max-w-[625px] text-gray-900">{body}</p>
         </div>
       )}
     </button>
