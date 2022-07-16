@@ -20,7 +20,8 @@ const Home: NextPage<Props> = ({ preview, page }) => {
   return (
     <div className="relative min-h-screen w-full">
       <Header />
-      <div className="overflow-hidden pt-[2rem]">
+
+      <div className="relative overflow-hidden pt-[2rem]">
         {page.modules.map((el) => {
           return <Module {...el} key={el.key} />;
         })}
