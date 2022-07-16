@@ -18,7 +18,7 @@ const HomeHighlightModudle: React.FC<HomeHighlightModuleProps> = (props) => {
             asset={props.image.asset}
             width={1000}
             objectFit="cover"
-            className="h-[375px] w-full -translate-y-12 overflow-hidden rounded-lg object-cover large:absolute large:-left-16 large:-top-[8%] large:h-[116%] large:translate-y-0"
+            className="z-50 h-[375px] w-full -translate-y-12 overflow-hidden rounded-lg object-cover large:absolute large:-left-16 large:-top-[8%] large:h-[116%] large:translate-y-0"
           />
         </div>
         <div className="flex-1 pb-20 large:py-28">

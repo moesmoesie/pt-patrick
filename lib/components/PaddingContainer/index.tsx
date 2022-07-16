@@ -13,7 +13,7 @@ const PaddingContainer: React.FC<PaddingContainerProps> = ({
         style={{
           background: color ?? "",
         }}
-        className={`
+        className={` relative
           ${
             paddingBottom == "small"
               ? "pb-[40px]"
