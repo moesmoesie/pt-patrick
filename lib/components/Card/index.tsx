@@ -9,7 +9,7 @@ const Card: React.FC<CardProps> = (props) => {
         </div>
         <p className="header-4 ml-4 font-bold">{props.title}</p>
       </div>
-      <p className="body-2 pr-4">{props.body}</p>
+      <p className="body-2 pr-4 text-gray-900">{props.body}</p>
     </div>
   );
 };
