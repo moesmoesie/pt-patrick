@@ -41,7 +41,7 @@ const HomeLandingModule: React.FC<z.infer<typeof HomeLandingModuleZod>> = (
           type="sanity"
           width={3000}
           objectFit="contain"
-          className="z-[1000] h-full medium:scale-150 large:scale-[1.15]"
+          className="z-[1000] h-full translate-x-10 medium:scale-150 large:scale-[1.15]"
         />
       </div>
     );
@@ -49,7 +49,7 @@ const HomeLandingModule: React.FC<z.infer<typeof HomeLandingModuleZod>> = (
 
   const Cards = React.memo(function WrapperCards() {
     return (
-      <div className="relative z-[9999] col-[1/3] row-[2/3] pb-20 medium:max-w-[600px]">
+      <div className="relative z-[9999] col-[1/3] row-[2/3] max-w-none pb-20 medium:max-w-[500px] large:max-w-none">
         <RadialBlur className=" absolute left-3/4 top-1/2 -translate-y-1/2 -translate-x-1/2 scale-[1.6] opacity-70 medium:hidden" />
         <div className="relative flex flex-col gap-4 large:flex-row">
           {props.cards.map((el) => {
