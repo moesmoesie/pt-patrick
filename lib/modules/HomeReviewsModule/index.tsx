@@ -52,15 +52,15 @@ const HomeHighlightModudle: React.FC<HomeReviewsModuleProps> = (props) => {
                     key={index}
                     className="ml-5 snap-center first:ml-0 last:mr-5"
                   >
-                    <div className="min-w-[335px] overflow-hidden rounded-lg bg-white shadow-lg large:flex">
+                    <div className="min-w-[335px] overflow-hidden rounded-lg bg-white shadow-lg large:flex large:h-[300px]">
                       <div>
                         <Image
                           type="sanity"
                           alt={el.image.alt ?? undefined}
                           caption={el.image.caption ?? undefined}
-                          width={400}
+                          width={800}
                           objectFit="cover"
-                          className="h-full w-full min-w-[300px]"
+                          className="h-[300px] w-full min-w-[300px] large:h-full"
                           asset={el.image.asset}
                         />
                       </div>
