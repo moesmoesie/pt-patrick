@@ -33,7 +33,7 @@ const HomeHighlightModudle: React.FC<HomeReviewsModuleProps> = (props) => {
 
           <div>
             <ContainerScroll
-              className="h-[600px] large:h-[400px]"
+              className="h-[600px] medium:h-[700px] large:h-[400px]"
               onScroll={(e) => {
                 const level = Math.floor(
                   (e.currentTarget.scrollLeft + 10) /
