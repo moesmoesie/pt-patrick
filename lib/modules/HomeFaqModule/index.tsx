@@ -10,6 +10,7 @@ const HomeFaqModule: React.FC<HomeFaqModuleProps> = (props) => {
       color={props.backgroundColor}
       paddingBottom={props.paddingBottom}
       paddingTop={props.paddingTop}
+      hasSeperator={props.hasSeperator}
     >
       <div className="large:flex large:gap-10">
         <div className="flex-1">

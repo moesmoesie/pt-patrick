@@ -9,6 +9,20 @@ module.exports = {
     "./lib/modules/**/*.{js,ts,jsx,tsx}",
     "./lib/sanity/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: [
+    ...["none", "s", "m", "l", "xl", "2xl", "3xl", "4xl"].flatMap((el) => {
+      return [
+        `pt-${el}`,
+        `small:pt-${el}`,
+        `medium:pt-${el}`,
+        `large:pt-${el}`,
+        `pb-${el}`,
+        `small:pb-${el}`,
+        `medium:pb-${el}`,
+        `large:pb-${el}`,
+      ];
+    }),
+  ],
   theme: {
     dropShadow: {
       "shadow-light": [

@@ -6,8 +6,8 @@ const HomeHighlightModudle: React.FC<HomeHighlightModuleProps> = (props) => {
   return (
     <ModuleContainer
       color="#000000"
-      paddingTop={"none"}
-      paddingBottom={"none"}
+      paddingTop={null}
+      paddingBottom={null}
       hasSeperator={props.hasSeperator}
     >
       <div className="large:flex">

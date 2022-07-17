@@ -2,6 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  /* sizes */
+  .pt-none {
+    padding-top: 0px;
+  }
+
+  .pb-none {
+    padding-bottom: 0px;
+  }
+
+  .pt-s {
+    padding-top: 20px;
+  }
+
+  .pb-s {
+    padding-bottom: 20px;
+  }
+
+  .pt-m {
+    padding-top: 40px;
+  }
+
+  .pb-m {
+    padding-bottom: 40px;
+  }
+
+  .pt-l {
+    padding-top: 80px;
+  }
+
+  .pb-l {
+    padding-bottom: 80px;
+  }
+
+  .pt-xl {
+    padding-top: 120px;
+  }
+
+  .pb-xl {
+    padding-bottom: 120px;
+  }
+
+  .pt-2xl {
+    padding-top: 160px;
+  }
+
+  .pb-2xl {
+    padding-bottom: 160px;
+  }
+
+  .pt-3xl {
+    padding-top: 200px;
+  }
+
+  .pb-3xl {
+    padding-bottom: 200px;
+  }
+
+  .pt-4xl {
+    padding-top: 250px;
+  }
+
+  .pb-4xl {
+    padding-bottom: 250px;
+  }
+}
+
 @layer components {
   .body-1-small {
     @apply font-overpass text-[19px] leading-[1.6];

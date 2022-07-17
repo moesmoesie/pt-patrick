@@ -1,15 +1,28 @@
 import { z } from "zod";
 
+export const SizeZod = z.union([
+  z.literal("none"),
+  z.literal("s"),
+  z.literal("m"),
+  z.literal("l"),
+  z.literal("xl"),
+  z.literal("2xl"),
+  z.literal("3xl"),
+  z.literal("4xl"),
+]);
+
+export const SizeGroupZod = z.object({
+  small: SizeZod,
+  medium: SizeZod,
+  large: SizeZod,
+});
+
 export const BaseModuleZod = z.object({
   key: z.string(),
   backgroundColor: z.string().nullable(),
   hasSeperator: z.boolean().nullable(),
-  paddingBottom: z
-    .union([z.literal("small"), z.literal("medium"), z.literal("large")])
-    .nullable(),
-  paddingTop: z
-    .union([z.literal("small"), z.literal("medium"), z.literal("large")])
-    .nullable(),
+  paddingBottom: SizeGroupZod.nullable(),
+  paddingTop: SizeGroupZod.nullable(),
 });
 
 export const SanityImageZod = z.object({

@@ -2,8 +2,8 @@ import ModuleContainerProps from "./types";
 import { Container, PaddingContainer } from "../../components";
 const ModuleContainer: React.FC<ModuleContainerProps> = ({
   color,
-  paddingBottom = "medium",
-  paddingTop = "medium",
+  paddingBottom,
+  paddingTop,
   hasSeperator = false,
   children,
 }) => {

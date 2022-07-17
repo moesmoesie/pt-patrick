@@ -11,7 +11,7 @@ const CoreInfoModule: React.FC<HomeCoreInfoModuleProps> = (props) => {
       color={props.backgroundColor}
       paddingTop={props.paddingTop}
       paddingBottom={props.paddingBottom}
-      hasSeperator={true}
+      hasSeperator={props.hasSeperator}
     >
       <div>
         <h2 className="header-2 mb-12 max-w-2xl font-bold large:mb-20">

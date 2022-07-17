@@ -1,6 +1,5 @@
-import { title } from "process";
-import { defineType } from "sanity";
-import { modulesTypes, findModuleIcon, findModule } from "../utils";
+import { defineField, defineType } from "sanity";
+import { modulesTypes, findModule } from "../utils";
 
 export default defineType({
   name: "moduleContainer",
@@ -18,10 +17,6 @@ export default defineType({
             value: "#ffffff",
           },
           {
-            title: "Black",
-            value: "#000000",
-          },
-          {
             title: "Gray",
             value: "#f0f0f0",
           },
@@ -32,50 +27,20 @@ export default defineType({
     {
       name: "paddingTop",
       title: "Padding Top",
-      type: "string",
-      options: {
-        list: [
-          {
-            title: "Small",
-            value: "small",
-          },
-          {
-            title: "Medium",
-            value: "medium",
-          },
-          {
-            title: "Large",
-            value: "large",
-          },
-        ],
-      },
+      type: "size",
     },
 
     {
       name: "paddingBottom",
       title: "Padding Bottom",
-      type: "string",
-      options: {
-        list: [
-          {
-            title: "Small",
-            value: "small",
-          },
-          {
-            title: "Medium",
-            value: "medium",
-          },
-          {
-            title: "Large",
-            value: "large",
-          },
-        ],
-      },
+      type: "size",
     },
+
     {
       title: "Add seperator at bottom of module?",
       name: "hasSeperator",
       type: "boolean",
+      validation: (rule) => rule.required(),
     },
     {
       name: "module",

@@ -18,6 +18,7 @@ const HomeHighlightModudle: React.FC<HomeReviewsModuleProps> = (props) => {
         paddingBottom={props.paddingBottom}
         paddingTop={props.paddingTop}
         color={props.backgroundColor}
+        hasSeperator={props.hasSeperator || undefined}
       >
         <div className="relative">
           <RadialBlur className="absolute top-1/2 -right-16  -translate-y-1/2" />
@@ -32,7 +33,7 @@ const HomeHighlightModudle: React.FC<HomeReviewsModuleProps> = (props) => {
 
           <div>
             <ContainerScroll
-              className="h-[600px] large:h-[300px]"
+              className="h-[600px] large:h-[400px]"
               onScroll={(e) => {
                 const level = Math.floor(
                   (e.currentTarget.scrollLeft + 10) /

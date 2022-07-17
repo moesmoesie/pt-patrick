@@ -6,8 +6,8 @@ import RichText from "../../components/RichText";
 const ContactModule: React.FC<ContactModuleProps> = (props) => {
   return (
     <ModuleContainer
-      paddingTop={"none"}
-      paddingBottom={"none"}
+      paddingTop={props.paddingTop ?? undefined}
+      paddingBottom={props.paddingBottom ?? undefined}
       hasSeperator={props.hasSeperator}
       color="#000000"
     >

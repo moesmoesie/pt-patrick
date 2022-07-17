@@ -2,8 +2,8 @@ import PaddingContainerProps from "./types";
 
 const PaddingContainer: React.FC<PaddingContainerProps> = ({
   color,
-  paddingBottom = "medium",
-  paddingTop = "medium",
+  paddingBottom,
+  paddingTop,
   hasSeperator = false,
   children,
 }) => {
@@ -13,31 +13,9 @@ const PaddingContainer: React.FC<PaddingContainerProps> = ({
         style={{
           background: color ?? "",
         }}
-        className={` relative
-          ${
-            paddingBottom == "small"
-              ? "pb-[40px]"
-              : paddingBottom === "medium"
-              ? "pb-[60px]"
-              : paddingBottom === "large"
-              ? "pb-[80px]"
-              : paddingBottom === "none"
-              ? "pb-0"
-              : ""
-          }
-
-          ${
-            paddingTop == "small"
-              ? "pt-[40px]"
-              : paddingTop === "medium"
-              ? "pt-[60px]"
-              : paddingTop === "large"
-              ? "pt-[80px]"
-              : paddingTop === "none"
-              ? "pt-0"
-              : ""
-          }
-          `}
+        className={`relative 
+        pt-${paddingTop?.small} medium:pt-${paddingTop?.medium} large:pt-${paddingTop?.large} 
+        pb-${paddingBottom?.small} medium:pb-${paddingBottom?.medium} large:pb-${paddingBottom?.large} `}
       >
         {children}
       </div>

@@ -17,8 +17,8 @@ const HomeLandingModule: React.FC<z.infer<typeof HomeLandingModuleZod>> = (
     <div className="overflow-hidden">
       <ModuleContainer
         color={props.backgroundColor}
-        paddingTop={"none"}
-        paddingBottom="none"
+        paddingTop={null}
+        paddingBottom={null}
         hasSeperator={props.hasSeperator}
       >
         <div className="relative grid-cols-2 grid-rows-[min-content,min-content] pt-20 large:grid large:pt-24">
