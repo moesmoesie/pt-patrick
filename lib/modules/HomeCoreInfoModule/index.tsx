@@ -41,7 +41,7 @@ const CoreInfoModule: React.FC<HomeCoreInfoModuleProps> = (props) => {
             </div>
           </div>
           <div>
-            <div className="relative mb-12 h-[290px] w-full overflow-hidden rounded-lg large:h-[350px]">
+            <div className="relative mb-12 h-[290px] w-full overflow-hidden rounded-lg medium:h-[350px] large:h-[350px]">
               <Image
                 width={800}
                 type="sanity"
@@ -55,7 +55,7 @@ const CoreInfoModule: React.FC<HomeCoreInfoModuleProps> = (props) => {
 
               <div className="pointer-events-none absolute left-0 top-0  h-full w-full bg-black opacity-25" />
 
-              <ul className="absolute top-1/2 flex -translate-y-1/2 flex-col gap-5 px-6 large:hidden">
+              <ul className="absolute top-1/2 flex -translate-y-1/2 flex-col gap-7 px-6 medium:gap-10 large:hidden">
                 {props.corePillars.map((el) => {
                   return (
                     <li key={el.value}>
@@ -75,10 +75,12 @@ const CoreInfoModule: React.FC<HomeCoreInfoModuleProps> = (props) => {
               </ul>
             </div>
 
-            <h3 className="header-4 mb-9 font-bold text-black">
+            <h3 className="header-4 mb-8 font-bold text-black">
               {value.title}
             </h3>
-            <p className="body-1 mb-8 text-gray-900">{value.body}</p>
+            <p className="body-1  mb-9 text-gray-900 medium:mb-12">
+              {value.body}
+            </p>
             <ul className="flex flex-row flex-wrap gap-2">
               {value.keywords.map((el) => {
                 return <Chip key={el}>{el}</Chip>;
