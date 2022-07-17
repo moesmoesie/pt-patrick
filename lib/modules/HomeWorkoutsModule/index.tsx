@@ -26,7 +26,10 @@ const HomeWorkoutsModule: React.FC<HomeWorkoutsModuleProps> = (props) => {
         <ContainerScroll className="h-[300px]">
           {props.workouts.map((el, index) => {
             return (
-              <div key={index} className="ml-6 first:ml-0 last:mr-6">
+              <div
+                key={index}
+                className="ml-6 snap-center first:ml-0 last:mr-6"
+              >
                 <WorkoutCard {...el} />
               </div>
             );
