@@ -19,6 +19,7 @@ const ContactModule: React.FC<ContactModuleProps> = (props) => {
             asset={props.image.asset}
             type={"sanity"}
             width={600}
+            objectFit="cover"
             className="h-[355px] w-full -translate-y-10 overflow-hidden rounded-lg object-cover large:h-full large:min-w-[650px]"
           />
         </div>
