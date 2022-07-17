@@ -10,13 +10,13 @@ const HomeAboutMeModule: React.FC<HomeAboutMeProps> = (props) => {
       paddingBottom={props.paddingBottom}
       hasSeperator={props.hasSeperator}
     >
-      <div className="flex flex-col large:flex-row-reverse large:gap-28 large:pt-16">
-        <div className="relative large:min-w-[450px]">
+      <div className="grid gap-y-8 medium:grid-cols-2 medium:grid-rows-[min-content,min-content] medium:gap-10 large:gap-12 large:gap-x-28">
+        <div className="medium:row[1/2] relative large:row-[2/3] large:min-w-[450px]">
           <div className="relative large:-translate-y-10">
             <Image
               type="sanity"
               width={1000}
-              className=" mb-12 aspect-square w-[99%] overflow-hidden rounded-full"
+              className=" aspect-square w-[99%] overflow-hidden rounded-full large:-mt-20 "
               lqip={props.image.lqip}
               objectFit="cover"
               asset={props.image.asset}
@@ -32,14 +32,12 @@ const HomeAboutMeModule: React.FC<HomeAboutMeProps> = (props) => {
           </div>
         </div>
 
-        <div className="large:flex-2">
-          <h2 className="header-2 mb-8  font-bold">
-            <RichText content={props.title} />
-          </h2>
-          <p className="font-overpass text-[23px] leading-[1.6] tracking-[0.02em] medium:text-[27px] ">
-            {props.body}
-          </p>
-        </div>
+        <h2 className="header-2 font-bold medium:col-[1/2] medium:row-[1/2] medium:max-w-[350px]  medium:self-end large:max-w-none">
+          <RichText content={props.title} />
+        </h2>
+        <p className="font-overpass text-[23px] leading-[1.6] tracking-[0.02em] medium:col-[1/3] medium:text-[27px] large:col-[1/2] large:row-[2/3] ">
+          {props.body}
+        </p>
       </div>
     </ModuleContainer>
   );
