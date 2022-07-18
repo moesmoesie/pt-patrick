@@ -31,24 +31,33 @@ const ContactModule: React.FC<ContactModuleProps> = (props) => {
           </h2>
           <p className="body-1 mb-7 medium:max-w-2xl">{props.body}</p>
           <div className="flex gap-5">
-            <button className="grid h-11 w-11 place-items-center rounded-full border border-white">
+            <a
+              href={`https://wa.me/${props.whatsapp}`}
+              className="grid h-11 w-11 place-items-center rounded-full border border-white"
+            >
               <FontAwesomeIcon
                 className="text-[21px] text-white"
                 icon={["fab", "whatsapp"]}
               />
-            </button>
-            <button className="grid h-11 w-11 place-items-center rounded-full border border-white">
+            </a>
+            <a
+              href={`tel:${props.phone}`}
+              className="grid h-11 w-11 place-items-center rounded-full border border-white"
+            >
               <FontAwesomeIcon
                 className="text-[21px] text-white"
                 icon={["fas", "phone"]}
               />
-            </button>
-            <button className="grid h-11 w-11 place-items-center rounded-full border border-white">
+            </a>
+            <a
+              href={`mailto:${props.email}`}
+              className="grid h-11 w-11 place-items-center rounded-full border border-white"
+            >
               <FontAwesomeIcon
                 className="text-[21px] text-white"
                 icon={["fas", "envelope"]}
               />
-            </button>
+            </a>
           </div>
         </div>
       </div>
