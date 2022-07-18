@@ -6,6 +6,7 @@ import {
   getClient,
   filterDataToSingleItem,
 } from "../lib/sanity/client/sanity.server";
+import { urlFor } from "../lib/sanity/client/sanity";
 import { HomePageProps, HomePageZod } from "../types";
 
 const Home: NextPage<{ page: HomePageProps }> = ({ page }) => {
@@ -15,6 +16,7 @@ const Home: NextPage<{ page: HomePageProps }> = ({ page }) => {
       title={page.title}
       keywords={page.keywords}
       description={page.description}
+      favicon={urlFor(page.global.favicon).width(32).url()}
     >
       <div>
         {page.modules.map((el) => {

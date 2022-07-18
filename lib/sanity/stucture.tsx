@@ -54,9 +54,19 @@ const stucture: StructureResolver = (S, content) => {
         )
     );
 
+  const SettingsItem = S.listItem()
+    .title("Settings")
+    .icon(() => <FontAwesomeIcon icon={"gear"} />)
+    .child(
+      S.document()
+        .documentId("settings")
+        .schemaType("settings")
+        .title("Settings")
+    );
+
   return S.list()
     .title("Content")
-    .items([PagesItem, ModulesItem, ComponentsItem]);
+    .items([PagesItem, ModulesItem, ComponentsItem, S.divider(), SettingsItem]);
 };
 
 export default stucture;

@@ -115,10 +115,22 @@ const contactModule = `{
 
 // START PAGES
 
+const settings = groq`
+*[_type == 'settings' && _id == 'settings'][0]{
+  "global" : *[_type == 'settings' && _id == 'settings'][0]{
+    "favicon": favicon.asset
+  },
+    ...
+}
+`;
+
 export const homeQuery = /* groq */ `
   *[_type == 'homePage' && _id == 'homePage']{
     _id,
     title,
+    "global" : *[_type == 'settings' && _id == 'settings'][0]{
+    "favicon": favicon.asset
+    },
     description,
     keywords,
     header->${header},

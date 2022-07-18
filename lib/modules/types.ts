@@ -17,6 +17,10 @@ export const SizeGroupZod = z.object({
   large: SizeZod,
 });
 
+export const GlobalZod = z.object({
+  favicon: z.any(),
+});
+
 export const BaseModuleZod = z.object({
   key: z.string(),
   module_identifier: z.string(),

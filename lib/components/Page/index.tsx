@@ -19,6 +19,7 @@ const Page: React.FC<PageProps> = (props) => {
   return (
     <>
       <Head>
+        <link rel="icon shortcut" href={props.favicon} />
         <meta name="keywords" content={props.keywords?.join(",")} />
         <meta name="description" content={props.description} />
         <title>{props.title}</title>
