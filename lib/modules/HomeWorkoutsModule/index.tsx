@@ -28,7 +28,7 @@ const HomeWorkoutsModule: React.FC<HomeWorkoutsModuleProps> = (props) => {
             return (
               <div
                 key={index}
-                className=" snap-center pr-5 last:pr-0 medium:snap-align-none"
+                className="relative snap-center pr-5 last:pr-12 medium:snap-align-none"
               >
                 <WorkoutCard {...el} />
               </div>
@@ -66,7 +66,7 @@ const WorkoutCard: React.FC<WorkoutProps> = (workout) => {
       <div className="absolute top-0 left-0 h-full w-full">
         <Image
           type="sanity"
-          width={300}
+          width={800}
           alt={workout.image.alt ?? undefined}
           caption={workout.image.caption ?? undefined}
           asset={workout.image.asset}
