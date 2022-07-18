@@ -28,7 +28,7 @@ const HomeWorkoutsModule: React.FC<HomeWorkoutsModuleProps> = (props) => {
             return (
               <div
                 key={index}
-                className="ml-6 snap-center first:ml-0 last:mr-6"
+                className=" snap-center pr-5 last:pr-0 medium:snap-align-none"
               >
                 <WorkoutCard {...el} />
               </div>

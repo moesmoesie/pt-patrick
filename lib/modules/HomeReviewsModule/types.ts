@@ -15,3 +15,4 @@ export const HomeReviewsModuleZod = BaseModuleZod.extend({
 });
 
 export type HomeReviewsModuleProps = z.infer<typeof HomeReviewsModuleZod>;
+export type ReviewProps = z.infer<typeof ReviewZod>;

@@ -70,6 +70,16 @@
 }
 
 @layer components {
+  .h-scroll::-webkit-scrollbar {
+    width: 1px;
+    height: 10px;
+  }
+
+  .h-scroll::-webkit-scrollbar-thumb {
+    @apply border-r-[0px] border-l-[10px] border-solid border-[transparent] bg-amethyst medium:border-r-[60px] medium:border-l-[60px];
+    background-clip: padding-box;
+  }
+
   .body-1-small {
     @apply font-overpass text-[19px] leading-[1.6];
   }
