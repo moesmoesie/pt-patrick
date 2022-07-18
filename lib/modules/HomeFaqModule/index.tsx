@@ -11,6 +11,7 @@ const HomeFaqModule: React.FC<HomeFaqModuleProps> = (props) => {
       paddingBottom={props.paddingBottom}
       paddingTop={props.paddingTop}
       hasSeperator={props.hasSeperator}
+      id={props.module_identifier}
     >
       <div className="large:flex large:gap-10">
         <div className="flex-1">

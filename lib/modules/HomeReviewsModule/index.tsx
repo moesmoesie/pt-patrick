@@ -13,6 +13,7 @@ const HomeHighlightModudle: React.FC<HomeReviewsModuleProps> = (props) => {
       paddingTop={props.paddingTop}
       color={props.backgroundColor}
       hasSeperator={props.hasSeperator || undefined}
+      id={props.module_identifier}
     >
       <div className="relative">
         <Container>

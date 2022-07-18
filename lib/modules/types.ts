@@ -19,6 +19,7 @@ export const SizeGroupZod = z.object({
 
 export const BaseModuleZod = z.object({
   key: z.string(),
+  module_identifier: z.string(),
   backgroundColor: z.string().nullable(),
   hasSeperator: z.boolean().nullable(),
   paddingBottom: SizeGroupZod.nullable(),

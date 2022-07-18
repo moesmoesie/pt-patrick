@@ -6,6 +6,7 @@ const ModuleContainer: React.FC<ModuleContainerProps> = ({
   paddingTop,
   hasSeperator = false,
   children,
+  id,
 }) => {
   return (
     <div
@@ -14,7 +15,11 @@ const ModuleContainer: React.FC<ModuleContainerProps> = ({
       }}
     >
       <Container>
-        <PaddingContainer paddingBottom={paddingBottom} paddingTop={paddingTop}>
+        <PaddingContainer
+          id={id}
+          paddingBottom={paddingBottom}
+          paddingTop={paddingTop}
+        >
           {children}
         </PaddingContainer>
         <div>

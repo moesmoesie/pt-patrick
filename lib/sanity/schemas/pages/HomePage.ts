@@ -16,6 +16,12 @@ export default defineType({
       title: "Description",
     },
     {
+      title: "Header",
+      name: "header",
+      type: "reference",
+      to: [{ type: "header" }],
+    },
+    {
       type: "array",
       name: "keywords",
       title: "Keywords",

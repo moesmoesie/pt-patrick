@@ -9,6 +9,7 @@ const HomeHighlightModudle: React.FC<HomeHighlightModuleProps> = (props) => {
       paddingTop={null}
       paddingBottom={null}
       hasSeperator={props.hasSeperator}
+      id={props.module_identifier}
     >
       <div className="large:flex">
         <div className="relative flex-[1.3]">

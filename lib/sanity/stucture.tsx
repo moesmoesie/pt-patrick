@@ -1,7 +1,6 @@
-import { createStructureBuilder } from "sanity/lib/dts/src/desk/structureBuilder";
 import { StructureResolver, StructureBuilder } from "sanity/desk";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { moduleData } from "./schemas/utils";
+import { moduleData, componentData } from "./schemas/utils";
 
 const getPage = (S: StructureBuilder, page: string) => {
   return S.document().documentId(page).schemaType(page);
@@ -25,7 +24,7 @@ const stucture: StructureResolver = (S, content) => {
 
   const ModulesItem = S.listItem()
     .title("Modules")
-    .icon(() => <FontAwesomeIcon icon={"puzzle-piece"} />)
+    .icon(() => <FontAwesomeIcon icon={"cubes"} />)
     .child(
       S.list()
         .title("Modules")
@@ -39,7 +38,25 @@ const stucture: StructureResolver = (S, content) => {
         )
     );
 
-  return S.list().title("Content").items([PagesItem, ModulesItem]);
+  const ComponentsItem = S.listItem()
+    .title("Components")
+    .icon(() => <FontAwesomeIcon icon={"cube"} />)
+    .child(
+      S.list()
+        .title("Components")
+        .items(
+          componentData.map((component) => {
+            return S.listItem()
+              .title(component.title)
+              .icon(() => component.icon)
+              .child(S.documentTypeList(component.type).title(component.title));
+          })
+        )
+    );
+
+  return S.list()
+    .title("Content")
+    .items([PagesItem, ModulesItem, ComponentsItem]);
 };
 
 export default stucture;

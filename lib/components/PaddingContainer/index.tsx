@@ -6,9 +6,10 @@ const PaddingContainer: React.FC<PaddingContainerProps> = ({
   paddingTop,
   hasSeperator = false,
   children,
+  id,
 }) => {
   return (
-    <div>
+    <div className="scroll-mt-12" id={id}>
       <div
         style={{
           background: color ?? "",

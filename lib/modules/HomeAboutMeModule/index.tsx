@@ -9,6 +9,7 @@ const HomeAboutMeModule: React.FC<HomeAboutMeProps> = (props) => {
       paddingTop={props.paddingTop}
       paddingBottom={props.paddingBottom}
       hasSeperator={props.hasSeperator}
+      id={props.module_identifier}
     >
       <div className="grid gap-y-8 medium:grid-cols-2 medium:grid-rows-[min-content,min-content] medium:gap-10 large:gap-12 large:gap-x-28">
         <div className="medium:row[1/2] relative large:row-[2/3] large:min-w-[450px]">

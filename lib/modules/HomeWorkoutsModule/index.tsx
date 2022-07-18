@@ -15,6 +15,7 @@ const HomeWorkoutsModule: React.FC<HomeWorkoutsModuleProps> = (props) => {
       color={props.backgroundColor}
       paddingTop={props.paddingTop}
       paddingBottom={props.paddingBottom}
+      id={props.module_identifier}
     >
       <div>
         <Container>

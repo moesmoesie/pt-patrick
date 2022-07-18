@@ -78,6 +78,7 @@ const HomeLandingModule: React.FC<z.infer<typeof HomeLandingModuleZod>> = (
         paddingTop={null}
         paddingBottom={null}
         hasSeperator={props.hasSeperator}
+        id={props.module_identifier}
       >
         <div className="relative pt-20 medium:grid medium:grid-cols-2 large:grid-rows-[min-content,min-content] large:pt-24">
           <HeroText />

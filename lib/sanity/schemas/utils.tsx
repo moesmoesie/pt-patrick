@@ -48,6 +48,22 @@ export const moduleData = [
   },
 ];
 
+export const componentData = [
+  {
+    title: "Header",
+    type: "header",
+    icon: <FontAwesomeIcon icon="header" />,
+  },
+];
+
+export const findComponent = (type: string) => {
+  return (
+    componentData.find((e) => {
+      return e.type === type;
+    }) ?? null
+  );
+};
+
 export const findModule = (type: string) => {
   return (
     moduleData.find((e) => {
@@ -55,6 +71,7 @@ export const findModule = (type: string) => {
     }) ?? null
   );
 };
+
 export const findModuleIcon = (type: string) => {
   return (
     moduleData.find((e) => {

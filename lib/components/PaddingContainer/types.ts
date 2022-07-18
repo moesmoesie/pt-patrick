@@ -7,6 +7,7 @@ interface PaddingContainerProps {
   paddingBottom?: z.infer<typeof SizeGroupZod> | null;
   paddingTop?: z.infer<typeof SizeGroupZod> | null;
   hasSeperator?: boolean;
+  id?: string;
 }
 
 export default PaddingContainerProps;

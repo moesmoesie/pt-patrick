@@ -10,6 +10,7 @@ const ContactModule: React.FC<ContactModuleProps> = (props) => {
       paddingBottom={props.paddingBottom ?? undefined}
       hasSeperator={props.hasSeperator}
       color="#000000"
+      id={props.module_identifier}
     >
       <div className="mt-10 text-white large:flex large:gap-16">
         <div>

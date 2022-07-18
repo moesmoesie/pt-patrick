@@ -9,6 +9,7 @@ const HomePricingModule: React.FC<HomePricingModuleProps> = (props) => {
       paddingTop={props.paddingTop}
       paddingBottom={props.paddingBottom}
       hasSeperator={props.hasSeperator}
+      id={props.module_identifier}
     >
       <h2 className="header-2 mb-12 max-w-2xl font-bold">
         <RichText content={props.title} />

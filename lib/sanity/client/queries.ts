@@ -13,6 +13,13 @@ const image = `{
     'lqip' : asset->metadata.lqip
   }`;
 
+const header = `{
+    menu[]{
+      title,
+      "id": module->module_identifier
+    }
+  }`;
+
 // END COMPONENTS
 
 // START MODULES
@@ -113,6 +120,7 @@ export const homeQuery = /* groq */ `
     title,
     description,
     keywords,
+    header->${header},
     modules[] {
         paddingTop,
         paddingBottom,
@@ -121,6 +129,7 @@ export const homeQuery = /* groq */ `
       ...module -> {
         "type" : _type,
         "key" : _id,
+        module_identifier,
         _type == 'homeLandingModule' => ${homeLandingModule},
         _type == 'homeCoreInfoModule' => ${homeCoreInfoModule},
         _type == 'homeAboutMeModule' => ${homeAboutmeModule},
