@@ -1,6 +1,7 @@
 import { z } from "zod";
-
+import { SanityImageZod } from "../../modules/types";
 export const HeaderZod = z.object({
+  logo: SanityImageZod,
   menu: z
     .object({
       title: z.string(),

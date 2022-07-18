@@ -14,6 +14,7 @@ const image = `{
   }`;
 
 const header = `{
+  logo${image},
     menu[]{
       title,
       "id": module->module_identifier

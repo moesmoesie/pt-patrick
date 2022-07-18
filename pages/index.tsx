@@ -31,7 +31,7 @@ const Home: NextPage<Props> = ({ preview, page }) => {
 
   return (
     <div className="relative min-h-screen w-full">
-      <Header menu={page.header.menu} />
+      <Header menu={page.header.menu} logo={page.header.logo} />
 
       <div className="relative overflow-hidden pt-[2rem]">
         {page.modules.map((el) => {

@@ -11,6 +11,11 @@ export default defineType({
       type: "string",
     }),
     defineField({
+      title: "Logo",
+      name: "logo",
+      type: "richImage",
+    }),
+    defineField({
       title: "Menu",
       name: "menu",
       type: "array",
