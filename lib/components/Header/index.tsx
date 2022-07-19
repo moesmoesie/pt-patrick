@@ -38,16 +38,14 @@ const Header: React.FC<HeaderProps> = (props) => {
           <div className="ml-auto medium:hidden" />
           {page.preview && (
             <Link href="/api/exit-preview">
-              <>
-                <a className="ml-7 font-rubik font-medium text-white ">
-                  <p className="bg-amethyst px-3 medium:hidden large:block">
-                    Exit Preview
-                  </p>
-                  <div className="hidden h-6 w-6 place-items-center rounded-full bg-amethyst text-white medium:grid large:hidden">
-                    <FontAwesomeIcon icon={"multiply"} />
-                  </div>
-                </a>
-              </>
+              <a className="ml-7 font-rubik font-medium text-white ">
+                <p className="bg-amethyst px-3 medium:hidden large:block">
+                  Exit Preview
+                </p>
+                <div className="hidden h-6 w-6 place-items-center rounded-full bg-amethyst text-white medium:grid large:hidden">
+                  <FontAwesomeIcon icon={"multiply"} />
+                </div>
+              </a>
             </Link>
           )}
         </div>
