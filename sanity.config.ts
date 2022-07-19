@@ -17,6 +17,20 @@ export default createConfig({
       structure,
     }),
   ],
+  document: {
+    productionUrl: async (prev, context) => {
+      const { client, dataset, document } = context;
+
+      if (document._type === "homePage") {
+        const params = new URLSearchParams();
+        params.set("secret", "secret");
+        params.set("slug", "");
+        return `https://pt-patrick.vercel.app/api/preview?${params}`;
+      }
+
+      return prev;
+    },
+  },
 
   schema: {
     types: [...schemaTypes, ...(Object.values(schemas) as any)],
