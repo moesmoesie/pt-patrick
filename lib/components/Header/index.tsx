@@ -29,7 +29,9 @@ const Header: React.FC<HeaderProps> = (props) => {
               {props.menu.map((el, index) => {
                 return (
                   <li key={index}>
-                    <a href={`#${el.id}`}>{el.title}</a>
+                    <a className="whitespace-nowrap" href={`#${el.id}`}>
+                      {el.title}
+                    </a>
                   </li>
                 );
               })}
