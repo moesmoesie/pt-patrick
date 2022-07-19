@@ -9,7 +9,8 @@ import {
 import { urlFor } from "../lib/sanity/client/sanity";
 import { HomePageProps, HomePageZod } from "../types";
 
-const Home: NextPage<{ page: HomePageProps }> = ({ page }) => {
+const Home: NextPage<{ page: HomePageProps; preview: boolean }> = (props) => {
+  const { preview, page } = props;
   return (
     <Page
       header={page.header}
@@ -17,6 +18,7 @@ const Home: NextPage<{ page: HomePageProps }> = ({ page }) => {
       keywords={page.keywords}
       description={page.description}
       favicon={urlFor(page.global.favicon).width(32).url()}
+      preview={preview}
     >
       <div>
         {page.modules.map((el) => {
@@ -33,6 +35,7 @@ export const getStaticProps: GetStaticProps = async ({ preview = false }) => {
   HomePageZod.parse(page);
   return {
     props: {
+      preview: preview,
       page: page,
     },
   };

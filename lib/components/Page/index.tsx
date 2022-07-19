@@ -3,6 +3,7 @@ import Header from "../Header";
 import Footer from "../Footer";
 import Head from "next/head";
 import { useEffect } from "react";
+import { PageContext } from "../../contexts";
 
 function sleep(time: any) {
   return new Promise((resolve) => setTimeout(resolve, time));
@@ -17,7 +18,7 @@ const Page: React.FC<PageProps> = (props) => {
   }, []);
 
   return (
-    <>
+    <PageContext.Provider value={{ preview: props.preview ?? false }}>
       <Head>
         <link rel="icon shortcut" href={props.favicon} />
         <meta name="keywords" content={props.keywords?.join(",")} />
@@ -31,7 +32,7 @@ const Page: React.FC<PageProps> = (props) => {
         </div>
         <Footer />
       </div>
-    </>
+    </PageContext.Provider>
   );
 };
 

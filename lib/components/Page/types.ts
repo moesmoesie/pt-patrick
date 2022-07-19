@@ -7,4 +7,5 @@ export interface PageProps {
   keywords?: string[];
   description?: string;
   favicon: string;
+  preview?: boolean;
 }
