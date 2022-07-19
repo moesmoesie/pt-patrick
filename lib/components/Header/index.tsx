@@ -10,7 +10,7 @@ const Header: React.FC<HeaderProps> = (props) => {
   return (
     <div className="fixed top-0 left-0 z-[10000] w-full border-b border-b-gray-300 bg-white supports-backdrop-filter:bg-white/80 supports-backdrop-filter:backdrop-blur-xl">
       <Container>
-        <div className="flex w-full py-5">
+        <div className="flex w-full items-center py-5">
           <Link href={"/"}>
             <a>
               <Image
@@ -19,8 +19,7 @@ const Header: React.FC<HeaderProps> = (props) => {
                 asset={props.logo.asset}
                 alt={props.logo.alt ?? ""}
                 caption={props.logo.caption ?? ""}
-                objectFit="contain"
-                className="h-6"
+                className="w-24"
               />
             </a>
           </Link>
