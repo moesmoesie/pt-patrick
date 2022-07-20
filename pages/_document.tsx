@@ -8,6 +8,13 @@ export default function Document() {
 
         <link
           rel="preload"
+          href={`/fonts/rubik/rubik-v20-latin-500.woff2`}
+          as="font"
+          crossOrigin=""
+        />
+
+        <link
+          rel="preload"
           href={`/fonts/rubik/rubik-v20-latin-regular.woff2`}
           as="font"
           crossOrigin=""
