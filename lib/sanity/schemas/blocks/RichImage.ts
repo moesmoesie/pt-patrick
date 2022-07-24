@@ -1,4 +1,5 @@
 import { defineType } from "sanity";
+import { Rule } from "sanity";
 
 export default defineType({
   title: "Image",
@@ -22,3 +23,13 @@ export default defineType({
     },
   ],
 });
+
+export const RichImageValidation: any = () => {
+  return (Rule: Rule) =>
+    Rule.custom((fields: any) => {
+      if (fields === undefined || fields?.asset === undefined) {
+        return "Image is required";
+      }
+      return true;
+    });
+};

@@ -1,4 +1,5 @@
 import { defineType } from "sanity";
+import { Rule } from "sanity";
 
 export default defineType({
   name: "icon",
@@ -14,6 +15,7 @@ export default defineType({
       name: "package",
       title: "Package",
       type: "string",
+      validation: (rule) => rule.required(),
       options: {
         list: [
           {
@@ -26,12 +28,22 @@ export default defineType({
           },
         ],
       },
-      validation: (rule) => rule.required(),
     },
     {
       name: "name",
       title: "Name",
       type: "string",
+      validation: (rule) => rule.required(),
     },
   ],
 });
+
+export const IconValidation: any = () => {
+  return (Rule: Rule) =>
+    Rule.custom((fields: any) => {
+      if (fields === undefined) {
+        return "Icon is required";
+      }
+      return true;
+    });
+};
